@@ -10,12 +10,12 @@ const PromiseSection = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-start pt-20 lg:pt-32">
                     {/* Left Content */}
                     <div className="space-y-8 text-white">
-                        <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
+                        <h2 className="text-5xl lg:text-6xl font-medium leading-tight font-bricolage-grotesque">
                             AI In Blockgram:<br />
                             <span className="text-gray-400">Promise or Pitfall?</span>
                         </h2>
 
-                        <p className="text-2xl lg:text-3xl font-semibold leading-snug">
+                        <p className="text-2xl max-w-xl font-medium leading-snug font-bricolage-grotesque">
                             People Deserve A Messaging App That Works For Them
                         </p>
                     </div>

@@ -12,7 +12,7 @@ const AboutUsSection = () => {
                         alt=""
                         className="w-12 h-12 object-contain"
                     />
-                    <h2 className="text-4xl lg:text-5xl font-bold text-white text-center">
+                    <h2 className="text-4xl lg:text-5xl font-medium text-white text-center font-fairplay-display">
                         About Blockgram
                     </h2>
                     <img

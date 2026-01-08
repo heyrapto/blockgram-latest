@@ -31,7 +31,7 @@ const StruggleSection = () => {
 
             <div className="relative max-w-6xl mx-auto px-4">
                 {/* Title */}
-                <h2 className="text-3xl lg:text-5xl font-bold text-center text-gray-900 mb-12 leading-tight">
+                <h2 className="text-3xl lg:text-5xl font-medium text-center text-gray-900 mb-12 leading-tight font-fairplay-display">
                     Did you struggle with any of<br />
                     the following in the last 12 months?
                 </h2>
