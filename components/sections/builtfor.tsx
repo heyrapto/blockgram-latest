@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { IoCheckmarkCircle, IoCloseCircle } from 'react-icons/io5';
 
 const BuiltForSection = () => {
@@ -90,13 +91,13 @@ const BuiltForSection = () => {
 
                             {/* Blockgram Feature */}
                             <div className="flex items-center gap-3">
-                                <IoCheckmarkCircle className="text-green-400 text-2xl flex-shrink-0" />
+                                <Image src="/icons/check.png" alt="Checkmark" width={24} height={24} className="flex-shrink-0" />
                                 <span className="text-gray-300">{item.blockgram}</span>
                             </div>
 
                             {/* Telegram Feature */}
                             <div className="flex items-center gap-3">
-                                <IoCloseCircle className="text-red-400 text-2xl flex-shrink-0" />
+                                <Image src="/icons/x.png" alt="Close" width={24} height={24} className="flex-shrink-0" />
                                 <span className="text-gray-400">{item.telegram}</span>
                             </div>
                         </div>

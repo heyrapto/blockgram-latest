@@ -21,7 +21,7 @@ const WhyChooseUsSection = () => {
                         <img
                             src="/images/why/underline-black.svg"
                             alt=""
-                            className="absolute -bottom-6 left-0 w-full"
+                            className="absolute -bottom-6 right-0 w-[50%"
                         />
                     </h2>
                 </div>
@@ -30,15 +30,22 @@ const WhyChooseUsSection = () => {
                     {/* Left Content */}
                     <div className="space-y-8">
                         <div>
-                            <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                Solving
-                                <img
-                                    src="/images/why/send-arrow.svg"
-                                    alt=""
-                                    className="w-12 h-12"
-                                />
-                                Telegram's<br />
-                                Flaws
+                            <h3 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                                <div className="flex items-baseline gap-3">
+                                    <span>Solving</span>
+                                    <img
+                                        src="/images/why/send-arrow.svg"
+                                        alt=""
+                                        className="w-16 h-16 translate-y-1"
+                                    />
+                                </div>
+
+                                <div className="">
+                                    <span>Telegram's</span>
+
+                                </div>
+
+                                <div>Flaws</div>
                             </h3>
 
                             <p className="text-lg text-gray-700 leading-relaxed">

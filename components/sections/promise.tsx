@@ -1,13 +1,13 @@
 const PromiseSection = () => {
     return (
-        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden">
+        <section className="relative bg-[#0a0e27]  overflow-hidden">
             <img
                 src="/images/promise/star.svg"
                 alt=""
                 className="absolute left-0 right-0 top-10 bottom-0 mx-auto w-8 h-8"
             />
             <div className="max-w-7xl mx-auto px-4">
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div className="grid lg:grid-cols-2 gap-12 items-start pt-20 lg:pt-32">
                     {/* Left Content */}
                     <div className="space-y-8 text-white">
                         <h2 className="text-5xl lg:text-6xl font-bold leading-tight">

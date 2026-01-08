@@ -1,11 +1,11 @@
 const IntroductionSection = () => {
     return (
-        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden">
+        <section className="relative bg-[#0a0e27] overflow-hidden">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="text-white space-y-6">
-                        <h2 className="text-4xl lg:text-5xl font-bold mb-8">
+                        <h2 className="text-2xl font-bold mb-8">
                             Introduction
                         </h2>
 
@@ -20,7 +20,7 @@ const IntroductionSection = () => {
                             <img
                                 src="/images/intro-img.png"
                                 alt="Blockgram Coin on Pillar"
-                                className="w-full max-w-md lg:max-w-lg object-contain"
+                                className="w-full object-contain"
                             />
                         </div>
                     </div>

@@ -9,32 +9,43 @@ const AISection = () => {
                     className="w-full h-full object-cover opacity-50"
                 />
             </div>
+
             <div className="relative max-w-7xl mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Left Content - Chart */}
+                    {/* LEFT — Chart */}
                     <div className="bg-[#0f1941] rounded-3xl p-12 lg:p-16">
-                        <h3 className="text-white text-5xl lg:text-6xl font-bold mb-12">72%</h3>
 
-                        {/* Bar Chart */}
-                        <div className="flex items-end gap-8 mb-8">
-                            {/* Yes Bar */}
+                        {/* Bars */}
+                        <div className="flex items-end gap-12 mt-12">
+                            {/* YES */}
                             <div className="flex flex-col items-center flex-1">
-                                <div className="w-full bg-white rounded-2xl mb-4" style={{ height: '320px' }}></div>
-                                <span className="text-white text-xl font-medium">Yes</span>
+                                <div className="relative w-full mb-4">
+                                    <div className="w-full h-[320px] bg-white rounded-2xl" />
+                                    <span className="absolute -top-14 left-1/2 -translate-x-1/2 text-white text-5xl font-bold">
+                                        72%
+                                    </span>
+                                </div>
+                                <span className="text-white text-xl font-medium text-center w-full">
+                                    Yes
+                                </span>
                             </div>
 
-                            {/* No Bar */}
+                            {/* NO */}
                             <div className="flex flex-col items-center flex-1">
-                                <div className="w-full bg-white rounded-2xl mb-4" style={{ height: '140px' }}></div>
-                                <span className="text-white text-xl font-medium">No</span>
+                                <div className="relative w-full mb-4">
+                                    <div className="w-full h-[140px] bg-white rounded-2xl" />
+                                    <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-white text-4xl font-bold">
+                                        28%
+                                    </span>
+                                </div>
+                                <span className="text-white text-xl font-medium text-center w-full">
+                                    No
+                                </span>
                             </div>
                         </div>
-
-                        {/* 28% Label */}
-                        <div className="text-white text-4xl font-bold text-right pr-8">28%</div>
                     </div>
 
-                    {/* Right Content - Text and Image */}
+                    {/* RIGHT — Text + Image */}
                     <div className="relative">
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12 leading-tight">
                             Do you need<br />
@@ -42,7 +53,7 @@ const AISection = () => {
                             in Telegram
                         </h2>
 
-                        {/* Statue Image with Logo Overlay */}
+                        {/* Image */}
                         <div className="relative">
                             <img
                                 src="/images/ai/man.png"
@@ -50,23 +61,19 @@ const AISection = () => {
                                 className="w-full max-w-md ml-auto grayscale"
                             />
 
-                            {/* AI Logo Badge */}
+                            {/* AI Logo */}
                             <div className="absolute top-1/4 left-0 lg:left-1/4">
-                                {/* Highlight Effect */}
                                 <img
                                     src="/images/ai/highlight.svg"
                                     alt=""
                                     className="absolute -top-6 -left-6 w-16 h-16"
                                 />
 
-                                {/* Logo Circle */}
-                                <div className="relative">
-                                    <img
-                                        src="/images/ai/logo.png"
-                                        alt="Blockgram AI"
-                                        className="w-32 h-32"
-                                    />
-                                </div>
+                                <img
+                                    src="/images/ai/logo.png"
+                                    alt="Blockgram AI"
+                                    className="w-32 h-32"
+                                />
                             </div>
                         </div>
                     </div>

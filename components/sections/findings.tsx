@@ -56,21 +56,20 @@ const FindingsSection = () => {
                         {findings.slice(0, 2).map((finding, index) => (
                             <div
                                 key={index}
-                                className="bg-[#0f1941] rounded-3xl p-8 text-white flex flex-col justify-between min-h-[400px] hover:transform hover:scale-[1.02] transition-transform duration-300"
+                                className="relative bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between min-h-[400px] hover:scale-[1.02] transition-transform duration-300"
                             >
-                                <div>
+                                <div className="p-8">
                                     <h3 className="text-2xl font-bold mb-4">{finding.title}</h3>
                                     <p className="text-gray-300 text-base leading-relaxed">
                                         {finding.description}
                                     </p>
                                 </div>
-                                <div className="mt-8 flex justify-end">
-                                    <img
-                                        src={finding.image}
-                                        alt={finding.title}
-                                        className="w-48 h-48 object-contain"
-                                    />
-                                </div>
+
+                                <img
+                                    src={finding.image}
+                                    alt={finding.title}
+                                    className="absolute bottom-0 right-0 w-[200px] h-[200px] object-cover"
+                                />
                             </div>
                         ))}
                     </div>
@@ -79,9 +78,9 @@ const FindingsSection = () => {
                     {findings.slice(2, 5).map((finding, index) => (
                         <div
                             key={index + 2}
-                            className="bg-[#0f1941] rounded-3xl p-8 text-white flex flex-col justify-between min-h-[380px] hover:transform hover:scale-[1.02] transition-transform duration-300"
+                            className="bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between min-h-[380px] hover:transform hover:scale-[1.02] transition-transform duration-300"
                         >
-                            <div>
+                            <div className="p-8">
                                 <h3 className="text-xl font-bold mb-4">{finding.title}</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
                                     {finding.description}
@@ -91,7 +90,7 @@ const FindingsSection = () => {
                                 <img
                                     src={finding.image}
                                     alt={finding.title}
-                                    className="w-40 h-40 object-contain"
+                                    className="w-[300px] h-[300px] object-contain"
                                 />
                             </div>
                         </div>
