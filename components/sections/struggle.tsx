@@ -37,71 +37,82 @@ const StruggleSection = () => {
                 </h2>
 
                 {/* Content Card */}
-                <div className="bg-[#0f1941] rounded-3xl p-8 lg:p-12">
-                    {/* Toggle Buttons */}
-                    <div className="flex justify-center mb-8">
-                        <div className="bg-[#1a2847] rounded-full p-1 inline-flex">
-                            <button
-                                onClick={() => setActiveView('chart')}
-                                className={`px-8 py-2 rounded-full transition-colors ${activeView === 'chart'
-                                    ? 'bg-transparent text-white'
-                                    : 'bg-transparent text-gray-400 hover:text-white'
-                                    }`}
-                            >
-                                Chart
-                            </button>
-                            <button
-                                onClick={() => setActiveView('table')}
-                                className={`px-8 py-2 rounded-full transition-colors ${activeView === 'table'
-                                    ? 'bg-white text-gray-900'
-                                    : 'bg-transparent text-gray-400 hover:text-white'
-                                    }`}
-                            >
-                                Table
-                            </button>
-                        </div>
+                <div className="bg-[#0f1941] rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+                    <div className="absolute inset-0">
+                        <img
+                            src="/images/promise/bg.png"
+                            alt=""
+                            className="w-full h-full object-cover z-0"
+                        />
                     </div>
-
-                    {/* Table View */}
-                    {activeView === 'table' && (
-                        <div className="bg-[#1a2847]/80 rounded-2xl overflow-hidden">
-                            {/* Table Header */}
-                            <div className="grid grid-cols-[2fr_1fr_1fr] gap-4 p-6 border-b border-[#2d3f5f]">
-                                <div></div>
-                                <div className="text-white font-semibold text-center">Yes</div>
-                                <div className="text-white font-semibold text-center">No</div>
-                            </div>
-
-                            {/* Table Rows */}
-                            {struggles.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className={`grid grid-cols-[2fr_1fr_1fr] gap-4 p-6 ${index !== struggles.length - 1 ? 'border-b border-[#2d3f5f]/50' : ''
-                                        } hover:bg-[#1a2847]/30 transition-colors`}
+                    {/* Toggle Buttons */}
+                    <div className="relative">
+                        <div className="flex justify-center mb-8">
+                            <div className="bg-[#1a2847] rounded-full p-1 inline-flex">
+                                <button
+                                    onClick={() => setActiveView('chart')}
+                                    className={`px-8 py-2 rounded-full transition-colors ${activeView === 'chart'
+                                        ? 'bg-white text-gray-900'
+                                        : 'bg-transparent text-gray-400 hover:text-white'
+                                        }`}
                                 >
-                                    <div className="text-white text-sm lg:text-base">
-                                        {item.issue}
-                                    </div>
-                                    <div className="text-white font-semibold text-center">
-                                        {item.yes}%
-                                    </div>
-                                    <div className="text-white font-semibold text-center">
-                                        {item.no}%
-                                    </div>
-                                </div>
-                            ))}
+                                    Chart
+                                </button>
+                                <button
+                                    onClick={() => setActiveView('table')}
+                                    className={`px-8 py-2 rounded-full transition-colors ${activeView === 'table'
+                                        ? 'bg-white text-gray-900'
+                                        : 'bg-transparent text-gray-400 hover:text-white'
+                                        }`}
+                                >
+                                    Table
+                                </button>
+                            </div>
                         </div>
-                    )}
 
-                    {/* Chart View - Placeholder */}
-                    {activeView === 'chart' && (
-                        <div className="bg-[#1a2847]/80 rounded-2xl p-12 flex items-center justify-center min-h-[500px]">
-                            <p className="text-gray-400 text-lg">Chart view would display visual data representation</p>
-                        </div>
-                    )}
+                        {/* Table View */}
+                        {activeView === 'table' && (
+                            <div className="bg-[#1a2847]/80 rounded-2xl overflow-hidden">
+                                {/* Table Header */}
+                                <div className="grid grid-cols-[2fr_1fr_1fr] gap-4 p-6 border-b border-[#2d3f5f] bg-white/10">
+                                    <div></div>
+                                    <div className="text-white font-semibold text-center">Yes</div>
+                                    <div className="text-white font-semibold text-center">No</div>
+                                </div>
+
+                                {/* Table Rows */}
+                                {struggles.map((item, index) => {
+                                    const isEven = index % 2 === 0;
+                                    return (
+                                        <div
+                                            key={index}
+                                            className={`grid grid-cols-[2fr_1fr_1fr] gap-4 p-6 ${isEven ? 'bg-transparent' : 'bg-white/10'} hover:bg-[#1a2847]/30 transition-colors`}
+                                        >
+                                            <div className="text-white text-sm lg:text-base">
+                                                {item.issue}
+                                            </div>
+                                            <div className="text-white font-semibold text-center">
+                                                {item.yes}%
+                                            </div>
+                                            <div className="text-white font-semibold text-center">
+                                                {item.no}%
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+
+                        {/* Chart View - Placeholder */}
+                        {activeView === 'chart' && (
+                            <div className="bg-[#1a2847]/80 rounded-2xl p-12 flex items-center justify-center min-h-[500px]">
+                                <p className="text-gray-400 text-lg">Chart view would display visual data representation</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 

@@ -1,7 +1,14 @@
 const ToolsSection = () => {
     return (
         <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="absolute inset-0">
+                <img
+                    src="/images/tools/bg.png"
+                    alt=""
+                    className="w-full h-full object-cover"
+                />
+            </div>
+            <div className="max-w-7xl mx-auto px-4 relative ">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     {/* Left Content */}
                     <div className="text-white space-y-12">
@@ -16,16 +23,16 @@ const ToolsSection = () => {
                             <img
                                 src="/images/tools/down-arrow.svg"
                                 alt=""
-                                className="absolute -left-16 top-0 w-24 h-24"
+                                className="absolute -left-24 top-0 w-24 h-24"
                             />
 
                             <div className="flex items-baseline gap-4">
-                                <span className="text-7xl lg:text-8xl font-medium font-fairplay-display ">14%</span>
+                                <span className="text-7xl lg:text-8xl font-bold font-fairplay-display ">14%</span>
                                 <span className="text-3xl text-gray-300">in 2023</span>
                             </div>
 
                             <div className="flex items-baseline gap-4">
-                                <span className="text-7xl lg:text-8xl font-medium font-fairplay-display ">21%</span>
+                                <span className="text-7xl lg:text-8xl font-bold font-fairplay-display ">21%</span>
                                 <span className="text-3xl text-gray-300">in 2024</span>
                             </div>
                         </div>

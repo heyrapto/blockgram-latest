@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { IoCheckmarkCircle, IoCloseCircle } from 'react-icons/io5';
 
 const BuiltForSection = () => {
     const features = [
@@ -45,19 +46,19 @@ const BuiltForSection = () => {
     ];
 
     return (
-        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden">
+        <section className="relative bg-[#335CFF] py-20 lg:py-32 overflow-hidden">
             {/* Background Blend Image */}
             <div className="absolute inset-0">
                 <img
                     src="/images/bg-blend.png"
                     alt=""
-                    className="w-full h-full object-cover mix-blend-overlay opacity-50"
+                    className="w-full h-full object-cover mix-blend-multiply"
                 />
             </div>
 
             <div className="relative max-w-7xl mx-auto px-4">
                 {/* Section Title */}
-                <h2 className="text-4xl lg:text-6xl font-medium text-center font-fairplay-display text-white mb-16">
+                <h2 className="text-4xl lg:text-6xl font-medium text-center text-white mb-16 font-fairplay-display">
                     Why Blockgram is Built for the Future?
                 </h2>
 
