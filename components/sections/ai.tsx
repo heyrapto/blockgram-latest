@@ -47,7 +47,7 @@ const AISection = () => {
 
                     {/* RIGHT — Text + Image */}
                     <div className="relative">
-                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12 leading-tight">
+                        <h2 className="text-4xl lg:text-5xl font-medium text-gray-900 mb-12 leading-tight font-fairplay-display ">
                             Do you need<br />
                             AI assistance<br />
                             in Telegram

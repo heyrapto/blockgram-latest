@@ -58,14 +58,14 @@ const BuiltForSection = () => {
 
             <div className="relative max-w-7xl mx-auto px-4">
                 {/* Section Title */}
-                <h2 className="text-4xl lg:text-6xl font-bold text-center text-white mb-16">
+                <h2 className="text-4xl lg:text-6xl font-medium text-center font-fairplay-display text-white mb-16">
                     Why Blockgram is Built for the Future?
                 </h2>
 
                 {/* Comparison Table */}
-                <div className="bg-[#1a2847]/50 backdrop-blur-sm rounded-3xl border border-white overflow-hidden">
+                <div className="bg-[#FFF]/5 backdrop-blur-sm rounded-3xl border border-[#FFF] overflow-hidden">
                     {/* Table Header */}
-                    <div className="grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 border-b border-[#2d3f5f] bg-[#1a2847]/80">
+                    <div className="grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 border-b border-[#FFFFFF05] bg-[#FFFFFF14]">
                         <div className="text-gray-300 font-semibold text-lg">
                             Feature / Need
                         </div>
@@ -81,8 +81,8 @@ const BuiltForSection = () => {
                     {features.map((item, index) => (
                         <div
                             key={index}
-                            className={`grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 ${index !== features.length - 1 ? 'border-b border-[#2d3f5f]/50' : ''
-                                } hover:bg-[#1a2847]/30 transition-colors`}
+                            className={`grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 ${index !== features.length - 1 ? 'border-b bg-[#FFFFFF05]' : ''
+                                } hover:bg-[#FFFFFF05] transition-colors`}
                         >
                             {/* Feature Name */}
                             <div className="text-gray-200 font-medium flex items-center">

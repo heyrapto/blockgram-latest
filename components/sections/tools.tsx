@@ -6,7 +6,7 @@ const ToolsSection = () => {
                     {/* Left Content */}
                     <div className="text-white space-y-12">
                         {/* Title */}
-                        <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
+                        <h2 className="text-5xl lg:text-6xl font-medium font-fairplay-display  leading-tight">
                             Smarter tools take<br />centre stage
                         </h2>
 
@@ -20,12 +20,12 @@ const ToolsSection = () => {
                             />
 
                             <div className="flex items-baseline gap-4">
-                                <span className="text-7xl lg:text-8xl font-bold">14%</span>
+                                <span className="text-7xl lg:text-8xl font-medium font-fairplay-display ">14%</span>
                                 <span className="text-3xl text-gray-300">in 2023</span>
                             </div>
 
                             <div className="flex items-baseline gap-4">
-                                <span className="text-7xl lg:text-8xl font-bold">21%</span>
+                                <span className="text-7xl lg:text-8xl font-medium font-fairplay-display ">21%</span>
                                 <span className="text-3xl text-gray-300">in 2024</span>
                             </div>
                         </div>
