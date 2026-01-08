@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { IoCheckmarkCircle, IoCloseCircle } from 'react-icons/io5';
 
 const BuiltForSection = () => {
     const features = [
@@ -78,30 +77,49 @@ const BuiltForSection = () => {
                     </div>
 
                     {/* Table Rows */}
-                    {features.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 ${index !== features.length - 1 ? 'border-b bg-[#FFFFFF05]' : ''
-                                } hover:bg-[#FFFFFF05] transition-colors`}
-                        >
-                            {/* Feature Name */}
-                            <div className="text-gray-200 font-medium flex items-center">
-                                {item.feature}
-                            </div>
+                    {features.map((item, index) => {
+                        const isEven = index % 2 === 0;
 
-                            {/* Blockgram Feature */}
-                            <div className="flex items-center gap-3">
-                                <Image src="/icons/check.png" alt="Checkmark" width={24} height={24} className="flex-shrink-0" />
-                                <span className="text-gray-300">{item.blockgram}</span>
-                            </div>
+                        return (
+                            <div
+                                key={index}
+                                className={`
+                grid grid-cols-[2fr_3fr_3fr] gap-4 p-6
+                ${isEven ? 'bg-[#FFFFFF05]' : 'bg-transparent'}
+                hover:bg-[#FFFFFF08] transition-colors
+            `}
+                            >
+                                {/* Feature Name */}
+                                <div className="text-gray-200 font-medium flex items-center">
+                                    {item.feature}
+                                </div>
 
-                            {/* Telegram Feature */}
-                            <div className="flex items-center gap-3">
-                                <Image src="/icons/x.png" alt="Close" width={24} height={24} className="flex-shrink-0" />
-                                <span className="text-gray-400">{item.telegram}</span>
+                                {/* Blockgram */}
+                                <div className="flex items-center gap-3">
+                                    <Image
+                                        src="/icons/check.png"
+                                        alt="Checkmark"
+                                        width={24}
+                                        height={24}
+                                        className="shrink-0"
+                                    />
+                                    <span className="text-gray-300">{item.blockgram}</span>
+                                </div>
+
+                                {/* Telegram */}
+                                <div className="flex items-center gap-3">
+                                    <Image
+                                        src="/icons/x.png"
+                                        alt="Close"
+                                        width={24}
+                                        height={24}
+                                        className="shrink-0"
+                                    />
+                                    <span className="text-gray-400">{item.telegram}</span>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>

@@ -2,14 +2,9 @@ import Button from "@/components/ui/button";
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen bg-[#0a0e27] overflow-hidden">
+        <section className="relative h-fit bg-[#0a0e27] overflow-hidden">
             {/* Background Images */}
             <div className="absolute inset-0">
-                {/* <img
-                    src="/images/hero/bg.png"
-                    alt=""
-                    className="absolute inset-0 w-full h-full object-cover opacity-0"
-                /> */}
                 <img
                     src="/images/hero/bg-blend.png"
                     alt=""
