@@ -42,7 +42,7 @@ const ToolsSection = () => {
                             <img
                                 src="/images/tools/summary.png"
                                 alt="AI"
-                                className="w-[400px] h-[200px]"
+                                className="w-[400px] h-[200px] z-0"
                             />
 
                             {/* Keyboard Interface */}
@@ -57,7 +57,7 @@ const ToolsSection = () => {
                                 <img
                                     src="/images/tools/keyboard.png"
                                     alt="Keyboard"
-                                    className="w-[400px]"
+                                    className="w-[400px] ml-10 -mt-10 z-50"
                                 />
 
                                 {/* Bottom Logo Badge */}
