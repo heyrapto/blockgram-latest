@@ -1,7 +1,105 @@
 const FindingsSection = () => {
-    return (
-        <div>findings section</div>
-    )
-}
+    const findings = [
+        {
+            title: "Scam Bots and Fake Accounts",
+            description: "Scams are the number one frustration. Fake airdrops, phishing links, and impersonators target users daily. Over 60% of people say they face scam attempts every month.",
+            image: "/images/findings/1.png",
+            size: "large"
+        },
+        {
+            title: "Risky Payments",
+            description: "Easily build powerful no-code automations with bots, triggers, conditions, and rules—all in one place.",
+            image: "/images/findings/2.png",
+            size: "large"
+        },
+        {
+            title: "Forgotten Chats",
+            description: "Instantly generate replies, recap conversations for other agents, and create new help articles.",
+            image: "/images/findings/3.png",
+            size: "small"
+        },
+        {
+            title: "Notification Overload",
+            description: "Immediately recommend helpful content with machine learning—directly in your product.",
+            image: "/images/findings/4.png",
+            size: "small"
+        },
+        {
+            title: "Too Many Accounts",
+            description: "Better understand your customers with AI-powered analysis of support conversations.",
+            image: "/images/findings/5.png",
+            size: "small"
+        }
+    ];
 
-export default FindingsSection
+    return (
+        <section className="relative py-20 bg-[#e8f4f8] overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+                <img
+                    src="/images/findings/bg.png"
+                    alt=""
+                    className="w-full h-full object-cover opacity-50"
+                />
+            </div>
+
+            <div className="relative max-w-7xl mx-auto px-4">
+                {/* Section Title */}
+                <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-900">
+                    Key Findings
+                </h2>
+
+                {/* Findings Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    {/* First Row - Two Large Cards */}
+                    <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 mb-0">
+                        {findings.slice(0, 2).map((finding, index) => (
+                            <div
+                                key={index}
+                                className="bg-[#0f1941] rounded-3xl p-8 text-white flex flex-col justify-between min-h-[400px] hover:transform hover:scale-[1.02] transition-transform duration-300"
+                            >
+                                <div>
+                                    <h3 className="text-2xl font-bold mb-4">{finding.title}</h3>
+                                    <p className="text-gray-300 text-base leading-relaxed">
+                                        {finding.description}
+                                    </p>
+                                </div>
+                                <div className="mt-8 flex justify-end">
+                                    <img
+                                        src={finding.image}
+                                        alt={finding.title}
+                                        className="w-48 h-48 object-contain"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Second Row - Three Small Cards */}
+                    {findings.slice(2, 5).map((finding, index) => (
+                        <div
+                            key={index + 2}
+                            className="bg-[#0f1941] rounded-3xl p-8 text-white flex flex-col justify-between min-h-[380px] hover:transform hover:scale-[1.02] transition-transform duration-300"
+                        >
+                            <div>
+                                <h3 className="text-xl font-bold mb-4">{finding.title}</h3>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    {finding.description}
+                                </p>
+                            </div>
+                            <div className="mt-8 flex justify-end">
+                                <img
+                                    src={finding.image}
+                                    alt={finding.title}
+                                    className="w-40 h-40 object-contain"
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default FindingsSection;

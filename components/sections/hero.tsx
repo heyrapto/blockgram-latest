@@ -5,11 +5,11 @@ const HeroSection = () => {
         <section className="relative min-h-screen bg-[#0a0e27] overflow-hidden">
             {/* Background Images */}
             <div className="absolute inset-0">
-                <img
+                {/* <img
                     src="/images/hero/bg.png"
                     alt=""
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
+                    className="absolute inset-0 w-full h-full object-cover opacity-0"
+                /> */}
                 <img
                     src="/images/hero/bg-blend.png"
                     alt=""
@@ -22,7 +22,7 @@ const HeroSection = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* LEFT CONTENT */}
                     <div className="text-white space-y-8">
-                        <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                        <h1 className="text-5xl lg:text-7xl leading-tight font-fairplay-display">
                             The{" "}
                             <span className="text-blue-400 relative inline-block">
                                 Telegram
@@ -76,10 +76,6 @@ const HeroSection = () => {
 
                         {/* Mockup Wrapper */}
                         <div className="relative overflow-visible">
-                            {/* Glow / Depth */}
-                            <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-110" />
-
-                            {/* Main Mockup */}
                             <img
                                 src="/images/hero/macbook-mock.png"
                                 alt="Blockgram Interface"

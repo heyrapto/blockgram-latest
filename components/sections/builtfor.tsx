@@ -1,0 +1,110 @@
+import { IoCheckmarkCircle, IoCloseCircle } from 'react-icons/io5';
+
+const BuiltForSection = () => {
+    const features = [
+        {
+            feature: "Scam Protection",
+            blockgram: "AI spam detection + file scanner",
+            telegram: "Scam bots, phishing links, no AI filters"
+        },
+        {
+            feature: "Crypto Transactions",
+            blockgram: "Username = wallet, in-chat transfers",
+            telegram: "No native wallet, relies on risky bots"
+        },
+        {
+            feature: "Notifications",
+            blockgram: "Smart credit system, priority alerts",
+            telegram: "All pings are equal, chaotic alerts"
+        },
+        {
+            feature: "Identity Verification",
+            blockgram: "Verified badges + impersonator check",
+            telegram: "Easy impersonation of KOLs & devs"
+        },
+        {
+            feature: "Group Management",
+            blockgram: "Auto folders, whale groups, token badges",
+            telegram: "Overloaded chats, manual sorting"
+        },
+        {
+            feature: "Productivity Tools",
+            blockgram: "Built-in reminders + \"Meet\" scheduling",
+            telegram: "No reminders or scheduling"
+        },
+        {
+            feature: "Calling",
+            blockgram: "Video calls + calendar-style scheduling",
+            telegram: "Basic, unreliable calls"
+        },
+        {
+            feature: "Account Limits",
+            blockgram: "Unlimited accounts, seamless switching",
+            telegram: "Restricted multiple account handling"
+        }
+    ];
+
+    return (
+        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden">
+            {/* Background Blend Image */}
+            <div className="absolute inset-0">
+                <img
+                    src="/images/bg-blend.png"
+                    alt=""
+                    className="w-full h-full object-cover mix-blend-overlay opacity-50"
+                />
+            </div>
+
+            <div className="relative max-w-7xl mx-auto px-4">
+                {/* Section Title */}
+                <h2 className="text-4xl lg:text-6xl font-bold text-center text-white mb-16">
+                    Why Blockgram is Built for the Future?
+                </h2>
+
+                {/* Comparison Table */}
+                <div className="bg-[#1a2847]/50 backdrop-blur-sm rounded-3xl border border-white overflow-hidden">
+                    {/* Table Header */}
+                    <div className="grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 border-b border-[#2d3f5f] bg-[#1a2847]/80">
+                        <div className="text-gray-300 font-semibold text-lg">
+                            Feature / Need
+                        </div>
+                        <div className="text-white font-semibold text-lg text-center">
+                            Blockgram
+                        </div>
+                        <div className="text-gray-300 font-semibold text-lg text-center">
+                            Telegram
+                        </div>
+                    </div>
+
+                    {/* Table Rows */}
+                    {features.map((item, index) => (
+                        <div
+                            key={index}
+                            className={`grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 ${index !== features.length - 1 ? 'border-b border-[#2d3f5f]/50' : ''
+                                } hover:bg-[#1a2847]/30 transition-colors`}
+                        >
+                            {/* Feature Name */}
+                            <div className="text-gray-200 font-medium flex items-center">
+                                {item.feature}
+                            </div>
+
+                            {/* Blockgram Feature */}
+                            <div className="flex items-center gap-3">
+                                <IoCheckmarkCircle className="text-green-400 text-2xl flex-shrink-0" />
+                                <span className="text-gray-300">{item.blockgram}</span>
+                            </div>
+
+                            {/* Telegram Feature */}
+                            <div className="flex items-center gap-3">
+                                <IoCloseCircle className="text-red-400 text-2xl flex-shrink-0" />
+                                <span className="text-gray-400">{item.telegram}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default BuiltForSection;

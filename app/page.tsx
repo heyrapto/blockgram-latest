@@ -2,6 +2,7 @@ import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 import AboutUsSection from "@/components/sections/aboutus";
 import AISection from "@/components/sections/ai";
+import BuiltForSection from "@/components/sections/builtfor";
 import FeaturesSection from "@/components/sections/features";
 import FindingsSection from "@/components/sections/findings";
 import HeroSection from "@/components/sections/hero";
@@ -23,6 +24,7 @@ export default function Home() {
       <FindingsSection />
       <IntroductionSection />
       <WhyChooseUsSection />
+      <BuiltForSection />
       <AISection />
       <ToolsSection />
       <FeaturesSection />
