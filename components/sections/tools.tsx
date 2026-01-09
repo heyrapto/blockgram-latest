@@ -46,35 +46,34 @@ const ToolsSection = () => {
                     {/* Right Content - Phone Mockup */}
                     <div className="relative flex justify-center lg:justify-end">
                         <div className="relative">
+                            {/* AI Summary - Higher z-index */}
                             <img
                                 src="/images/tools/summary.png"
                                 alt="AI"
-                                className="w-[400px] h-[200px] z-50"
+                                className="w-[400px] h-[200px] relative z-50"
                             />
 
-                            {/* Keyboard Interface */}
-                            <div className="relative">
-                                <img
-                                    src="/images/tools/curved-up-arrow.svg"
-                                    alt=""
-                                    className="absolute -left-20 top-1/2 w-24 h-24"
-                                />
+                            {/* Curved Arrow */}
+                            <img
+                                src="/images/tools/curved-up-arrow.svg"
+                                alt=""
+                                className="absolute -left-20 top-1/2 w-24 h-24 z-10"
+                            />
 
-                                {/* Keyboard */}
-                                <img
-                                    src="/images/tools/keyboard.png"
-                                    alt="Keyboard"
-                                    className="w-[400px] ml-10 -mt-10 z-0"
-                                />
+                            {/* Keyboard - Lower z-index */}
+                            <img
+                                src="/images/tools/keyboard.png"
+                                alt="Keyboard"
+                                className="w-[400px] ml-10 -mt-3 relative z-0"
+                            />
 
-                                {/* Bottom Logo Badge */}
-                                <div className="absolute -bottom-12 -right-6">
-                                    <img
-                                        src="/images/tools/bottom-logo.png"
-                                        alt="Blockgram"
-                                        className="w-32 h-32"
-                                    />
-                                </div>
+                            {/* Bottom Logo Badge */}
+                            <div className="absolute -bottom-12 -right-6 z-20">
+                                <img
+                                    src="/images/tools/bottom-logo.png"
+                                    alt="Blockgram"
+                                    className="w-32 h-32"
+                                />
                             </div>
                         </div>
                     </div>
