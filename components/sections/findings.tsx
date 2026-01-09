@@ -45,7 +45,7 @@ const FindingsSection = () => {
 
             <div className="relative max-w-7xl mx-auto px-4">
                 {/* Section Title */}
-                <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-900">
+                <h2 className="text-5xl lg:text-6xl font-medium text-center mb-16 text-gray-900 font-fairplay-display">
                     Key Findings
                 </h2>
 

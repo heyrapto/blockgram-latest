@@ -16,7 +16,7 @@ const WhyChooseUsSection = () => {
             <div className="relative max-w-7xl mx-auto px-4">
                 {/* Section Title */}
                 <div className="text-center mb-16">
-                    <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 relative inline-block">
+                    <h2 className="text-5xl lg:text-6xl font-medium text-gray-900 relative inline-block font-fairplay-display">
                         Why Blockgram?
                         <img
                             src="/images/why/underline-black.svg"
@@ -30,7 +30,7 @@ const WhyChooseUsSection = () => {
                     {/* Left Content */}
                     <div className="space-y-8">
                         <div>
-                            <h3 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h3 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight font-fairplay-display">
                                 <div className="flex items-baseline gap-3">
                                     <span>Solving</span>
                                     <img
