@@ -1,6 +1,6 @@
 const StatsSection = () => {
     return (
-        <section className="relative bg-gradient-to-br from-[#e8f4f8] to-[#d4e9f2] py-20 lg:py-32 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-[#e8f4f8] to-[#d4e9f2] py-20 lg:py-32 overflow-hidden h-[733px] flex justify-center items-center">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
@@ -10,7 +10,7 @@ const StatsSection = () => {
                 />
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-4">
+            <div className="relative max-w-[1400px] mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left Content - Large Statistic */}
                     <div className="space-y-8">
@@ -25,11 +25,11 @@ const StatsSection = () => {
 
                     {/* Right Content */}
                     <div className="space-y-6">
-                        <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                        <h3 className="text-2xl lg:text-4xl font-medium text-gray-900 leading-tight font-bricolage-grotesque">
                             Users Double Down on Smarter Messaging in 2025.
                         </h3>
 
-                        <p className="text-lg text-gray-700 leading-relaxed">
+                        <p className="text-2xl text-gray-700 leading-relaxed">
                             People are demanding clarity, context, and security in their chats. The need for AI-powered summaries, trusted identity checks, and safe in-chat payments has surged. Blockgram puts these features front and center, helping users focus on what matters instead of drowning in noise.
                         </p>
                     </div>

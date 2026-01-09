@@ -3,8 +3,15 @@ import Button from "../ui/button";
 
 const AboutUsSection = () => {
     return (
-        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden">
-            <div className="max-w-6xl mx-auto px-4">
+        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden h-[1312px] flex justify-center items-center overflow-hidden">
+            <div className="absolute inset-0">
+                <img
+                    src="/images/tools/bg.png"
+                    alt=""
+                    className="w-full h-full object-cover"
+                />
+            </div>
+            <div className="max-w-6xl mx-auto px-4 relative">
                 {/* Title with Leaf Decorations */}
                 <div className="flex items-center justify-center gap-4 mb-16">
                     <img
@@ -23,7 +30,7 @@ const AboutUsSection = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className="relative bg-[#1a2847]/50 backdrop-blur-sm border border-[#2d3f5f] rounded-3xl p-8 lg:p-12">
+                <div className="relative bg-[#1a2847]/50 backdrop-blur-sm border border-[#2d3f5f] rounded-3xl p-8 lg:p-[100px] h-[800px]">
                     {/* Text Content */}
                     <div className="space-y-8 text-white">
                         <p className="text-lg lg:text-xl leading-relaxed">

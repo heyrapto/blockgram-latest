@@ -46,7 +46,7 @@ const BuiltForSection = () => {
     ];
 
     return (
-        <section className="relative bg-[#335CFF] py-20 lg:py-32 overflow-hidden">
+        <section className="relative bg-[#335CFF] py-20 lg:py-32 overflow-hidden h-screen">
             {/* Background Blend Image */}
             <div className="absolute inset-0">
                 <img
@@ -63,9 +63,9 @@ const BuiltForSection = () => {
                 </h2>
 
                 {/* Comparison Table */}
-                <div className="bg-[#FFF]/5 backdrop-blur-sm rounded-3xl border border-[#FFF] overflow-hidden">
+                <div className="bg-[#FFF]/5 backdrop-blur-sm rounded-3xl border border-[#FFF] overflow-hidden h-[800px]">
                     {/* Table Header */}
-                    <div className="grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 border-b border-[#FFFFFF05] bg-[#FFFFFF14]">
+                    <div className="grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 border-b border-[#FFFFFF05] bg-[#FFFFFF14] h-[82px]">
                         <div className="text-gray-300 font-semibold text-lg">
                             Feature / Need
                         </div>
@@ -84,7 +84,7 @@ const BuiltForSection = () => {
                         return (
                             <div
                                 key={index}
-                                className={`
+                                className={` h-[100px]
                 grid grid-cols-[2fr_3fr_3fr] gap-4 p-6
                 ${isEven ? 'bg-[#FFFFFF05]' : 'bg-transparent'}
                 hover:bg-[#FFFFFF08] transition-colors

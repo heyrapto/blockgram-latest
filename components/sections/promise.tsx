@@ -1,12 +1,19 @@
 const PromiseSection = () => {
     return (
-        <section className="relative bg-[#0a0e27]  overflow-hidden">
+        <section className="relative bg-[#0a0e27] overflow-hidden">
+            <div className="absolute inset-0">
+                <img
+                    src="/images/tools/bg.png"
+                    alt=""
+                    className="w-full h-full object-cover"
+                />
+            </div>
             <img
                 src="/images/promise/star.svg"
                 alt=""
                 className="absolute left-0 right-0 top-10 bottom-0 mx-auto w-8 h-8"
             />
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-4 relative">
                 <div className="grid lg:grid-cols-2 gap-12 items-start pt-20 lg:pt-32">
                     {/* Left Content */}
                     <div className="space-y-8 text-white">

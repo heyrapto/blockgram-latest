@@ -1,11 +1,11 @@
 const IntroductionSection = () => {
     return (
-        <section className="relative bg-[#0a0e27] overflow-hidden">
+        <section className="relative bg-[#0a0e27] overflow-hidden h-[600px]">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="text-white space-y-6">
-                        <h2 className="text-2xl font-bold mb-8">
+                        <h2 className="text-2xl font-bold mb-8 font-fairplay-display">
                             Introduction
                         </h2>
 

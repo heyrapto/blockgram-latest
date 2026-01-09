@@ -121,7 +121,7 @@ const FeaturesSection = () => {
 
                             {/* Card Content */}
                             <div className="px-6 pb-8">
-                                <h3 className="text-xl md:text-2xl font-inter font-medium mb-3">
+                                <h3 className="text-xl md:text-xl font-inter font-medium mb-3">
                                     {card.title}
                                 </h3>
                                 <p className="text-gray-400 text-sm md:text-base leading-relaxed font-inter">

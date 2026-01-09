@@ -1,6 +1,6 @@
 const AISection = () => {
     return (
-        <section className="relative py-20 bg-[#e8f4f8] overflow-hidden">
+        <section className="relative py-20 bg-[#e8f4f8] overflow-hidden h-screen">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img

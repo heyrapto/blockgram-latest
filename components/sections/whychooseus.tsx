@@ -3,7 +3,7 @@ import Button from "../ui/button";
 
 const WhyChooseUsSection = () => {
     return (
-        <section className="relative py-20 bg-[#e8f4f8] overflow-hidden">
+        <section className="relative py-20 bg-[#e8f4f8] overflow-hidden h-screen">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
@@ -30,7 +30,7 @@ const WhyChooseUsSection = () => {
                     {/* Left Content */}
                     <div className="space-y-8">
                         <div>
-                            <h3 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight font-fairplay-display">
+                            <h3 className="text-4xl lg:text-8xl font-bold text-gray-900 mb-6 leading-tight font-fairplay-display">
                                 <div className="flex items-baseline gap-3">
                                     <span>Solving</span>
                                     <img
