@@ -1,6 +1,6 @@
 const AISection = () => {
     return (
-        <section className="relative py-20 bg-[#e8f4f8] overflow-hidden h-screen flex justify-center items-center">
+        <section className="relative py-20 bg-[#e8f4f8] overflow-hidden h-[1070px] flex justify-center items-center">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img

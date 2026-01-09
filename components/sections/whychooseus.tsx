@@ -3,7 +3,7 @@ import Button from "../ui/button";
 
 const WhyChooseUsSection = () => {
     return (
-        <section className="relative py-20 bg-[#e8f4f8] overflow-hidden h-screen">
+        <section className="relative py-16 bg-[#e8f4f8] overflow-hidden h-[1062px] flex justify-center items-center">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
