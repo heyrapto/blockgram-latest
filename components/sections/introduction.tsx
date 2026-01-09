@@ -1,10 +1,10 @@
 const IntroductionSection = () => {
     return (
         <section className="relative bg-[#0a0e27] overflow-hidden h-[600px]">
-            <div className="max-w-7xl mx-auto px-4">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-7xl mx-auto px-4 h-full">
+                <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
                     {/* Left Content */}
-                    <div className="text-white space-y-6">
+                    <div className="text-white space-y-6 z-10 relative">
                         <h2 className="text-2xl font-bold mb-8 font-fairplay-display">
                             Introduction
                         </h2>
@@ -14,15 +14,13 @@ const IntroductionSection = () => {
                         </p>
                     </div>
 
-                    {/* Right Image */}
-                    <div className="flex justify-center lg:justify-end">
-                        <div className="relative">
-                            <img
-                                src="/images/intro-img.png"
-                                alt="Blockgram Coin on Pillar"
-                                className="w-full object-contain"
-                            />
-                        </div>
+                    {/* Right Image - Absolute positioning to touch bottom */}
+                    <div className="relative h-full">
+                        <img
+                            src="/images/intro-img.png"
+                            alt="Blockgram Coin on Pillar"
+                            className="absolute bottom-0 right-0 w-full max-w-lg h-auto object-contain object-bottom"
+                        />
                     </div>
                 </div>
             </div>

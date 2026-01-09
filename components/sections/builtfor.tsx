@@ -46,7 +46,7 @@ const BuiltForSection = () => {
     ];
 
     return (
-        <section className="relative bg-[#335CFF] py-20 lg:py-32 overflow-hidden h-screen">
+        <section className="relative bg-[#335CFF] py-20 lg:py-32 overflow-hidden">
             {/* Background Blend Image */}
             <div className="absolute inset-0">
                 <img

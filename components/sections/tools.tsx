@@ -1,6 +1,6 @@
 const ToolsSection = () => {
     return (
-        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden">
+        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden h-[1062px]">
             <div className="absolute inset-0">
                 <img
                     src="/images/tools/bg.png"
@@ -13,7 +13,7 @@ const ToolsSection = () => {
                     {/* Left Content */}
                     <div className="text-white space-y-12">
                         {/* Title */}
-                        <h2 className="text-5xl lg:text-6xl font-medium font-fairplay-display  leading-tight">
+                        <h2 className="text-5xl lg:text-7xl font-medium font-fairplay-display  leading-tight">
                             Smarter tools take<br />centre stage
                         </h2>
 
