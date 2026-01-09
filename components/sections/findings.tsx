@@ -90,7 +90,7 @@ const FindingsSection = () => {
                                 <img
                                     src={finding.image}
                                     alt={finding.title}
-                                    className="w-[300px] h-[300px] object-contain"
+                                    className="w-[300px] h-[300px] object-cover"
                                 />
                             </div>
                         </div>
