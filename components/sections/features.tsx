@@ -2,15 +2,6 @@ import { featureCards, redefinesMessagingItems } from "@/constants/features";
 import Image from "next/image";
 
 const FeaturesSection = () => {
-    // Duplicate items for infinite scroll effect
-    const extendedItems = [...redefinesMessagingItems, ...redefinesMessagingItems]; // 2x duplication usually enough for CSS loop if formatted right
-
-    // Split into odd/even or first-half/second-half for the columns?
-    // The user wants TWO columns moving in OPPOSITE directions.
-    // Ideally, column 1 has specific items, column 2 has others, but to fill them up we need separate lists.
-    // The user's screenshot showed 02-04 on left, 05-07 on right.
-    // So I will make col1 = items 0-2 (repeated), col2 = items 3-5 (repeated).
-
     const col1Items = [...redefinesMessagingItems.slice(0, 3), ...redefinesMessagingItems.slice(0, 3)];
     const col2Items = [...redefinesMessagingItems.slice(3), ...redefinesMessagingItems.slice(3)];
 
@@ -28,33 +19,33 @@ const FeaturesSection = () => {
             </div>
 
             <div className="container mx-auto px-4 py-20 lg:py-32">
-                {/* Part 1: Redefines Messaging - Swapped Order: Content First, Header Last */}
-
+                {/* Part 1: Redefines Messaging */}
                 <div className="mb-32">
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
-                        {/* Left Column: Feature Image (Static) */}
-                        <div className="relative z-10">
-                            <Image
-                                src="/images/features/main-feature.png"
-                                alt="Blockgram Interface"
-                                width={800}
-                                height={800}
-                                className="w-full h-auto object-contain rounded-2xl md:rounded-[2rem] shadow-2xl"
-                            />
+                    {/* Main Content Area - Image + Scrolling Cards */}
+                    <div className="relative flex flex-col lg:flex-row gap-8 mb-24 min-h-[600px] lg:min-h-[900px]">
+                        {/* Left: Large Phone Image */}
+                        <div className="w-full lg:w-auto lg:flex-shrink-0 relative">
+                            <div className="relative w-full lg:w-[500px] xl:w-[600px]">
+                                <Image
+                                    src="/images/features/main-feature.png"
+                                    alt="Blockgram Interface"
+                                    width={1500}
+                                    height={1500}
+                                    className="w-full h-auto object-contain rounded-2xl md:rounded-[2rem] shadow-2xl"
+                                />
+                            </div>
                         </div>
 
-                        {/* Right Column: Infinite Scroll Lists */}
-                        {/* We need a fixed height container to mask the overflowing content */}
-                        <div className="grid grid-cols-2 gap-6 h-[500px] md:h-[900px] overflow-hidden mask-gradient relative">
+                        {/* Right: Scrolling Cards in 2 Columns */}
+                        <div className="flex-1 lg:ml-8 xl:ml-16 grid grid-cols-2 gap-4 lg:gap-6 h-[500px] lg:h-[900px] overflow-hidden mask-gradient relative">
                             {/* Column 1: Scroll UP */}
-                            <div className="flex flex-col gap-6 animate-scroll-up">
+                            <div className="flex flex-col gap-4 lg:gap-6 animate-scroll-up">
                                 {col1Items.map((item, index) => (
-                                    <div key={`col1-${index}`} className="flex flex-col gap-3 p-6 rounded-2xl bg-white/30 backdrop-blur-md border border-white/20 shadow-lg">
-                                        <span className="text-4xl md:text-5xl font-medium font-inter">
+                                    <div key={`col1-${index}`} className="flex flex-col gap-2 lg:gap-3 p-4 lg:p-6 rounded-xl lg:rounded-2xl bg-white/30 backdrop-blur-md border border-white/20 shadow-lg">
+                                        <span className="text-3xl lg:text-4xl xl:text-5xl font-medium font-inter">
                                             {item.number}
                                         </span>
-                                        <p className="text-gray-900 leading-relaxed font-inter text-sm md:text-base">
+                                        <p className="text-gray-900 leading-relaxed font-inter text-xs lg:text-sm xl:text-base">
                                             {item.title}
                                         </p>
                                     </div>
@@ -62,13 +53,13 @@ const FeaturesSection = () => {
                             </div>
 
                             {/* Column 2: Scroll DOWN */}
-                            <div className="flex flex-col gap-6 animate-scroll-down">
+                            <div className="flex flex-col gap-4 lg:gap-6 animate-scroll-down">
                                 {col2Items.map((item, index) => (
-                                    <div key={`col2-${index}`} className="flex flex-col gap-3 p-6 rounded-2xl bg-white/30 backdrop-blur-md border border-white/20 shadow-lg">
-                                        <span className="text-4xl md:text-5xl font-medium font-inter">
+                                    <div key={`col2-${index}`} className="flex flex-col gap-2 lg:gap-3 p-4 lg:p-6 rounded-xl lg:rounded-2xl bg-white/30 backdrop-blur-md border border-white/20 shadow-lg">
+                                        <span className="text-3xl lg:text-4xl xl:text-5xl font-medium font-inter">
                                             {item.number}
                                         </span>
-                                        <p className="text-gray-900 leading-relaxed font-inter text-sm md:text-base">
+                                        <p className="text-gray-900 leading-relaxed font-inter text-xs lg:text-sm xl:text-base">
                                             {item.title}
                                         </p>
                                     </div>
@@ -77,28 +68,25 @@ const FeaturesSection = () => {
                         </div>
                     </div>
 
-                    {/* Header Moved to Bottom of this section */}
-                    <div className="flex flex-col items-start justify-center text-center gap-4">
-                        <div className="flex flex-col items-center gap-4">
-                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-fairplay-display leading-tight text-left">
-                                {/* First line */}
-                                <div className="flex items-center gap-4">
-                                    <span>How Blockgram</span>
-                                    <Image
-                                        src="/images/features/envelope.svg"
-                                        alt="Envelope"
-                                        width={64}
-                                        height={64}
-                                        className="inline-block w-12 md:w-16 h-auto"
-                                    />
-                                </div>
+                    {/* Header at Bottom */}
+                    <div className="flex flex-col items-start justify-center gap-4">
+                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-fairplay-display leading-tight text-center">
+                            {/* First line */}
+                            <div className="flex items-center gap-4">
+                                <span>How Blockgram</span>
+                                <Image
+                                    src="/images/features/envelope.svg"
+                                    alt="Envelope"
+                                    width={64}
+                                    height={64}
+                                    className="inline-block w-12 md:w-16 h-auto"
+                                />
+                            </div>
 
-                                {/* Second line */}
-                                <div>Redefines Messaging</div>
-                            </h2>
-                        </div>
+                            {/* Second line */}
+                            <div>Redefines Messaging</div>
+                        </h2>
                     </div>
-
                 </div>
 
                 {/* Part 2: Feature Cards */}
