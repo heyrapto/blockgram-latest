@@ -3,13 +3,13 @@ const FindingsSection = () => {
         {
             title: "Scam Bots and Fake Accounts",
             description: "Scams are the number one frustration. Fake airdrops, phishing links, and impersonators target users daily. Over 60% of people say they face scam attempts every month.",
-            image: "/images/findings/1.png",
+            image: "/images/findings/1.gif",
             size: "large"
         },
         {
             title: "Risky Payments",
             description: "Easily build powerful no-code automations with bots, triggers, conditions, and rules—all in one place.",
-            image: "/images/findings/2.png",
+            image: "/images/findings/2.gif",
             size: "large"
         },
         {
