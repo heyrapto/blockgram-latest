@@ -3,7 +3,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
     return (
-        <footer className="relative bg-white py-20 overflow-hidden">
+        <footer className="relative bg-white py-20 overflow-hidden" id='footer'>
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}

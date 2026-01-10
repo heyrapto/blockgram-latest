@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HowItWorksSection = () => {
     return (
-        <section className="relative w-full overflow-hidden pt-20 pb-0">
+        <section className="relative w-full overflow-hidden pt-20 pb-0" id="how-it-works">
             {/* Background Image */}
             <div className="absolute inset-0 -z-10">
                 <Image

@@ -6,7 +6,7 @@ const FeaturesSection = () => {
     const col2Items = [...redefinesMessagingItems.slice(3), ...redefinesMessagingItems.slice(3)];
 
     return (
-        <section className="relative w-full overflow-hidden">
+        <section className="relative w-full overflow-hidden" id="feature">
             {/* Background Image */}
             <div className="absolute inset-0 -z-10">
                 <Image

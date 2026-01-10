@@ -24,19 +24,19 @@ const Navbar = () => {
                             <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors">
                                 How it Works
                             </a>
-                            <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
+                            <a href="#footer" className="text-gray-300 hover:text-white transition-colors">
                                 Contact
                             </a>
                         </div>
 
                         {/* Right Side Actions */}
                         <div className="flex items-center gap-4">
-                            <button className="text-gray-300 hover:text-white transition-colors">
+                            <a className="text-gray-300 hover:text-white transition-colors" href="https://blitzgramm.vercel.app/">
                                 Login
-                            </button>
-                            <button className="bg-[#0278E0] hover:bg-[#0267C9] text-white px-6 py-2 rounded-full transition-colors">
+                            </a>
+                            <a className="bg-[#0278E0] hover:bg-[#0267C9] text-white px-6 py-2 rounded-full transition-colors" href="https://blockgram.gitbook.io/blockgram-docs/about-blockgram/core-features/send-and-receive-crypto-in-chat">
                                 Whitepaper
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
