@@ -13,11 +13,12 @@ const HeroSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative max-w-7xl mx-auto px-4 pt-32 pb-20 overflow-visible">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative max-w-7xl mx-auto px-4 pt-24 sm:pt-28 lg:pt-32 pb-16 lg:pb-20 overflow-visible">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+
                     {/* LEFT CONTENT */}
-                    <div className="text-white space-y-8">
-                        <h1 className="text-5xl lg:text-7xl leading-tight font-fairplay-display">
+                    <div className="text-white space-y-6 lg:space-y-8">
+                        <h1 className="text-4xl sm:text-5xl lg:text-7xl leading-tight font-fairplay-display">
                             The{" "}
                             <span className="text-blue-400 relative inline-block">
                                 Telegram
@@ -30,17 +31,17 @@ const HeroSection = () => {
                                 <img
                                     src="/images/hero/underline.svg"
                                     alt=""
-                                    className="absolute -bottom-5 left-0 w-full"
+                                    className="absolute -bottom-4 lg:-bottom-5 left-0 w-full"
                                 />
                             </span>
                         </h1>
 
-                        <p className="text-gray-300 text-lg max-w-xl">
+                        <p className="text-gray-300 text-base sm:text-lg max-w-xl">
                             Familiar design, but with AI, better UX, and built-in features you
                             always wished Telegram had.
                         </p>
 
-                        <Button className="text-lg">
+                        <Button className="text-base sm:text-lg">
                             Get Started
                             <svg
                                 width="20"
@@ -61,8 +62,8 @@ const HeroSection = () => {
                     </div>
 
                     {/* RIGHT CONTENT – MOCKUP */}
-                    <div className="relative">
-                        {/* Arrow */}
+                    <div className="relative mt-10 lg:mt-0">
+                        {/* Arrow (desktop only) */}
                         <img
                             src="/images/hero/arrow.svg"
                             alt=""
@@ -70,18 +71,17 @@ const HeroSection = () => {
                         />
 
                         {/* Mockup Wrapper */}
-                        <div className="relative overflow-visible">
+                        <div className="relative overflow-visible flex justify-center lg:block">
                             <img
-                                src="/images/hero/macbook-mock.png"
+                                src="/images/hero/main.png"
                                 alt="Blockgram Interface"
-                                className="relative z-10 w-[140%] max-w-none lg:w-[160%] translate-x-10"
-                            />
-
-                            {/* Transaction Modal */}
-                            <img
-                                src="/images/hero/transaction-mock.png"
-                                alt="Transaction Success"
-                                className="absolute bottom-[4%] right-[-24%] w-72 lg:w-[500px] z-20"
+                                className="
+                                    relative z-10
+                                    w-full max-w-[500px]
+                                    sm:max-w-[600px]
+                                    lg:w-[160%] lg:max-w-none
+                                    lg:translate-x-10
+                                "
                             />
                         </div>
                     </div>
@@ -89,7 +89,7 @@ const HeroSection = () => {
             </div>
 
             {/* Bottom Gradient */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-[#0a0e27] to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 h-24 lg:h-32 bg-linear-to-t from-[#0a0e27] to-transparent" />
         </section>
     );
 };

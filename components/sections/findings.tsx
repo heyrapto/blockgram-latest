@@ -3,13 +3,13 @@ const FindingsSection = () => {
         {
             title: "Scam Bots and Fake Accounts",
             description: "Scams are the number one frustration. Fake airdrops, phishing links, and impersonators target users daily. Over 60% of people say they face scam attempts every month.",
-            image: "/images/findings/1.gif",
+            image: "/images/findings/2.gif",
             size: "large"
         },
         {
             title: "Risky Payments",
             description: "Easily build powerful no-code automations with bots, triggers, conditions, and rules—all in one place.",
-            image: "/images/findings/2.gif",
+            image: "/images/findings/1.gif",
             size: "large"
         },
         {
@@ -56,7 +56,7 @@ const FindingsSection = () => {
                         {findings.slice(0, 2).map((finding, index) => (
                             <div
                                 key={index}
-                                className="relative bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between min-h-[400px] hover:scale-[1.02] transition-transform duration-300"
+                                className="relative bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between min-h-[400px] hover:scale-[1.02] transition-transform duration-300 overflow-hidden"
                             >
                                 <div className="p-8">
                                     <h3 className="text-2xl font-bold mb-4">{finding.title}</h3>
@@ -68,7 +68,7 @@ const FindingsSection = () => {
                                 <img
                                     src={finding.image}
                                     alt={finding.title}
-                                    className="absolute bottom-0 right-0 w-[200px] h-[200px] object-cover"
+                                    className="absolute bottom-0 right-0 w-[250px] h-[250px] object-cover overflow-hidden"
                                 />
                             </div>
                         ))}
@@ -78,7 +78,7 @@ const FindingsSection = () => {
                     {findings.slice(2, 5).map((finding, index) => (
                         <div
                             key={index + 2}
-                            className="bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between min-h-[380px] hover:transform hover:scale-[1.02] transition-transform duration-300"
+                            className="bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between min-h-[380px] hover:transform hover:scale-[1.02] transition-transform duration-300 overflow-hidden"
                         >
                             <div className="p-8">
                                 <h3 className="text-xl font-bold mb-4">{finding.title}</h3>

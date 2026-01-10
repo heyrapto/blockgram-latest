@@ -112,3 +112,6 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+-fix spacing in ai section
+- fix image size in intro section
