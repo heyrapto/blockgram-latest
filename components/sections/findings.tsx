@@ -8,7 +8,7 @@ const FindingsSection = () => {
         },
         {
             title: "Risky Payments",
-            description: "Easily build powerful no-code automations with bots, triggers, conditions, and rules—all in one place.",
+            description: "Easily build powerful no-code automations with bots, triggers, conditions, and rules all in one place.",
             image: "/images/findings/1.gif",
             size: "large"
         },
@@ -20,7 +20,7 @@ const FindingsSection = () => {
         },
         {
             title: "Notification Overload",
-            description: "Immediately recommend helpful content with machine learning—directly in your product.",
+            description: "Immediately recommend helpful content with machine learning directly in your product.",
             image: "/images/findings/4.png",
             size: "small"
         },

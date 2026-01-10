@@ -1,6 +1,6 @@
 const StatsSection = () => {
     return (
-        <section className="relative bg-gradient-to-br from-[#e8f4f8] to-[#d4e9f2] py-20 lg:py-32 overflow-hidden h-[733px] flex justify-center items-center">
+        <section className="relative bg-gradient-to-br from-[#e8f4f8] to-[#d4e9f2] py-20 lg:py-32 overflow-hidden md:h-[733px] h-fit flex justify-center items-center">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img

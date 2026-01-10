@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { IoCheckmarkCircle, IoCloseCircle } from 'react-icons/io5';
 
 const BuiltForSection = () => {
     const features = [
@@ -46,7 +45,7 @@ const BuiltForSection = () => {
     ];
 
     return (
-        <section className="relative bg-[#335CFF] py-20 lg:py-32 overflow-hidden">
+        <section className="relative bg-[#335CFF] py-12 lg:py-32 overflow-hidden">
             {/* Background Blend Image */}
             <div className="absolute inset-0">
                 <img
@@ -58,69 +57,67 @@ const BuiltForSection = () => {
 
             <div className="relative max-w-7xl mx-auto px-4">
                 {/* Section Title */}
-                <h2 className="text-4xl lg:text-6xl font-medium text-center text-white mb-16 font-fairplay-display">
+                <h2 className="text-3xl lg:text-6xl font-medium text-center text-white mb-8 lg:mb-16 font-fairplay-display pt-4 lg:pt-0">
                     Why Blockgram is Built for the Future?
                 </h2>
 
-                {/* Comparison Table */}
-                <div className="bg-[#FFF]/5 backdrop-blur-sm rounded-3xl border border-[#FFF] overflow-hidden h-[800px]">
-                    {/* Table Header */}
-                    <div className="grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 border-b border-[#FFFFFF05] bg-[#FFFFFF14] h-[82px]">
-                        <div className="text-gray-300 font-semibold text-lg">
-                            Feature / Need
-                        </div>
-                        <div className="text-white font-semibold text-lg text-center">
-                            Blockgram
-                        </div>
-                        <div className="text-gray-300 font-semibold text-lg text-center">
-                            Telegram
-                        </div>
-                    </div>
-
-                    {/* Table Rows */}
-                    {features.map((item, index) => {
-                        const isEven = index % 2 === 0;
-
-                        return (
-                            <div
-                                key={index}
-                                className={` h-[100px]
-                grid grid-cols-[2fr_3fr_3fr] gap-4 p-6
-                ${isEven ? 'bg-[#FFFFFF05]' : 'bg-transparent'}
-                hover:bg-[#FFFFFF08] transition-colors
-            `}
-                            >
-                                {/* Feature Name */}
-                                <div className="text-gray-200 font-medium flex items-center">
-                                    {item.feature}
-                                </div>
-
-                                {/* Blockgram */}
-                                <div className="flex items-center gap-3">
-                                    <Image
-                                        src="/icons/check.png"
-                                        alt="Checkmark"
-                                        width={24}
-                                        height={24}
-                                        className="shrink-0"
-                                    />
-                                    <span className="text-gray-300">{item.blockgram}</span>
-                                </div>
-
-                                {/* Telegram */}
-                                <div className="flex items-center gap-3">
-                                    <Image
-                                        src="/icons/x.png"
-                                        alt="Close"
-                                        width={24}
-                                        height={24}
-                                        className="shrink-0"
-                                    />
-                                    <span className="text-gray-400">{item.telegram}</span>
-                                </div>
+                {/* Table Container - Scrollable on Mobile */}
+                <div className="overflow-x-auto lg:overflow-visible">
+                    <div className="bg-[#FFF]/5 backdrop-blur-sm rounded-3xl border border-[#FFF] overflow-hidden min-w-[800px] lg:min-w-0 lg:h-[800px]">
+                        {/* Table Header */}
+                        <div className="grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 border-b border-[#FFFFFF05] bg-[#FFFFFF14] h-[82px]">
+                            <div className="text-gray-300 font-semibold text-lg">
+                                Feature / Need
                             </div>
-                        );
-                    })}
+                            <div className="text-white font-semibold text-lg text-center">
+                                Blockgram
+                            </div>
+                            <div className="text-gray-300 font-semibold text-lg text-center">
+                                Telegram
+                            </div>
+                        </div>
+
+                        {/* Table Rows */}
+                        {features.map((item, index) => {
+                            const isEven = index % 2 === 0;
+
+                            return (
+                                <div
+                                    key={index}
+                                    className={`h-[100px] grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 ${isEven ? 'bg-[#FFFFFF05]' : 'bg-transparent'} hover:bg-[#FFFFFF08] transition-colors`}
+                                >
+                                    {/* Feature Name */}
+                                    <div className="text-gray-200 font-medium flex items-center">
+                                        {item.feature}
+                                    </div>
+
+                                    {/* Blockgram */}
+                                    <div className="flex items-center gap-3">
+                                        <Image
+                                            src="/icons/check.png"
+                                            alt="Checkmark"
+                                            width={24}
+                                            height={24}
+                                            className="shrink-0"
+                                        />
+                                        <span className="text-gray-300">{item.blockgram}</span>
+                                    </div>
+
+                                    {/* Telegram */}
+                                    <div className="flex items-center gap-3">
+                                        <Image
+                                            src="/icons/x.png"
+                                            alt="Close"
+                                            width={24}
+                                            height={24}
+                                            className="shrink-0"
+                                        />
+                                        <span className="text-gray-400">{item.telegram}</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </section>

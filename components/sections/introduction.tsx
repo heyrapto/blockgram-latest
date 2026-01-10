@@ -1,6 +1,6 @@
 const IntroductionSection = () => {
     return (
-        <section className="relative bg-[#0a0e27] overflow-hidden h-[600px]">
+        <section className="relative bg-[#0a0e27] overflow-hidden md:h-[600px] h-[1200px]">
             <div className="max-w-7xl mx-auto px-4 h-full">
                 <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
                     {/* Left Content */}

@@ -2,7 +2,7 @@ import Button from "@/components/ui/button";
 
 const HeroSection = () => {
     return (
-        <section className="relative h-fit bg-[#0a0e27] overflow-hidden" id="home">
+        <section className="relative lg:h-fit h-screen bg-[#0a0e27] overflow-hidden" id="home">
             {/* Background Images */}
             <div className="absolute inset-0">
                 <img
@@ -17,7 +17,7 @@ const HeroSection = () => {
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
 
                     {/* LEFT CONTENT */}
-                    <div className="text-white space-y-6 lg:space-y-8">
+                    <div className="text-white space-y-6 lg:space-y-8 lg:pt-0 pt-30">
                         <h1 className="text-4xl sm:text-5xl lg:text-7xl leading-tight font-fairplay-display">
                             The{" "}
                             <span className="text-blue-400 relative inline-block">
@@ -67,22 +67,31 @@ const HeroSection = () => {
                         <img
                             src="/images/hero/arrow.svg"
                             alt=""
-                            className="absolute left-52 top-52 w-20 hidden lg:block z-20"
+                            className="absolute left-28 top-52 w-20 hidden lg:block z-20"
                         />
 
                         {/* Mockup Wrapper */}
-                        <div className="relative overflow-visible flex justify-center lg:block">
-                            <img
-                                src="/images/hero/main.png"
-                                alt="Blockgram Interface"
-                                className="
-                                    relative z-10
-                                    w-full max-w-[500px]
-                                    sm:max-w-[600px]
-                                    lg:w-[160%] lg:max-w-none
-                                    lg:translate-x-10
-                                "
-                            />
+                        <div className="relative overflow-visible flex justify-center lg:block"><img
+                            src="/images/hero/main.png"
+                            alt="Blockgram Interface"
+                            className="
+        relative z-10
+        w-full
+        max-w-[320px]
+        sm:max-w-[0px]
+        md:max-w-[500px]
+        pt-12
+        translate-y-6
+        sm:translate-y-8
+        md:translate-y-0
+
+        lg:w-[150%]
+        lg:max-w-none
+        lg:translate-x-10
+        lg:translate-y-0
+    "
+                        />
+
                         </div>
                     </div>
                 </div>

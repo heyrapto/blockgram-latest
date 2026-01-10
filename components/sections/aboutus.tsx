@@ -3,7 +3,7 @@ import Button from "../ui/button";
 
 const AboutUsSection = () => {
     return (
-        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden h-[1312px] flex justify-center items-center overflow-hidden" id="about">
+        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden md:h-[1312px] h-fit flex justify-center items-center overflow-hidden" id="about">
             <div className="absolute inset-0">
                 <img
                     src="/images/tools/bg.png"
