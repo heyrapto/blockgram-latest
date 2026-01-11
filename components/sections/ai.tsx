@@ -7,7 +7,7 @@ const AISection = () => {
             </div>
 
             {/* Stats Card - Hidden on mobile, visible on large screens - LEFT */}
-            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[45%] xl:w-[40%] max-w-[600px] mx-auto z-10">
+            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[45%] xl:w-[50%] max-w-[800px] mx-auto z-10">
                 <img
                     src="/images/ai/left-stat.png"
                     alt="Statistics"
