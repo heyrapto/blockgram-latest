@@ -7,10 +7,13 @@
   --foreground: #171717;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: white;
   font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
 }
 
 .font-fairplay-display {
