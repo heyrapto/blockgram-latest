@@ -22,7 +22,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Desktop Navigation Links */}
-                        <div className="hidden md:flex items-center gap-8">
+                        <div className="hidden lg:flex items-center gap-8">
                             <a href="#home" className="text-blue-400 hover:text-blue-300 transition-colors">
                                 Home
                             </a>
@@ -41,7 +41,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Desktop Right Side Actions */}
-                        <div className="hidden md:flex items-center gap-4">
+                        <div className="hidden lg:flex items-center gap-4">
                             <a className="text-gray-300 hover:text-white transition-colors" href="https://blitzgramm.vercel.app/">
                                 Login
                             </a>
@@ -53,7 +53,7 @@ const Navbar = () => {
                         {/* Mobile Hamburger Menu Button */}
                         <button
                             onClick={toggleMenu}
-                            className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+                            className="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
                             aria-label="Toggle menu"
                         >
                             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
