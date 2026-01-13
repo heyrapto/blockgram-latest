@@ -17,9 +17,9 @@ const PromiseSection = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-start pt-20 lg:pt-32">
                     {/* Left Content */}
                     <div className="space-y-8 text-white">
-                        <h2 className="text-5xl lg:text-6xl font-medium leading-tight font-bricolage-grotesque">
+                        <h2 className="text-5xl lg:text-[70px] font-medium leading-tight font-bricolage-grotesque bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
                             AI In Blockgram:<br />
-                            <span className="text-gray-400">Promise or Pitfall?</span>
+                            Promise or Pitfall?
                         </h2>
 
                         <p className="text-2xl max-w-xl font-medium leading-snug font-bricolage-grotesque">
@@ -44,19 +44,19 @@ const PromiseSection = () => {
                     <img
                         src="/images/promise/man.png"
                         alt="Balance and Wisdom"
-                        className="w-full max-w-4xl mx-auto"
+                        className="w-full lg:max-w-4xl max-w-[600px] mx-auto"
                     />
 
                     {/* Decorative Stars around the statue */}
                     <img
                         src="/images/promise/star.svg"
                         alt=""
-                        className="absolute top-[300px] left-[20px] w-12 h-12"
+                        className="absolute top-[300px] left-[20px] lg:w-12 lg:h-12 w-6 h-6"
                     />
                     <img
                         src="/images/promise/star.svg"
                         alt=""
-                        className="absolute bottom-40 right-20 w-12 h-12 "
+                        className="absolute bottom-40 right-20 lg:w-12 lg:h-12 w-6 h-6"
                         style={{ animationDelay: '0.5s' }}
                     />
                 </div>

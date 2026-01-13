@@ -30,7 +30,7 @@ const AboutUsSection = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className="relative bg-[#1a2847]/50 backdrop-blur-sm border border-[#2d3f5f] rounded-3xl p-8 lg:p-[100px] h-[800px]">
+                <div className="relative bg-[#1a2847]/50 backdrop-blur-sm border border-[#2d3f5f] rounded-3xl p-8 lg:p-[100px] md:h-[800px] h-fit">
                     {/* Text Content */}
                     <div className="space-y-8 text-white">
                         <p className="text-lg lg:text-xl leading-relaxed">

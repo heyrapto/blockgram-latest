@@ -45,26 +45,26 @@ const ToolsSection = () => {
 
                     {/* Right Content - Phone Mockup */}
                     <div className="relative flex justify-center lg:justify-end">
-                        <div className="relative">
-                            {/* AI Summary - Higher z-index */}
+                        <div className="relative flex flex-col lg:block items-center lg:items-start">
+                            {/* AI Summary */}
                             <img
                                 src="/images/tools/summary.png"
                                 alt="AI"
-                                className="w-[400px] h-[200px] relative z-50"
+                                className="w-full max-w-[300px] h-auto relative z-50"
                             />
 
-                            {/* Curved Arrow */}
+                            {/* Curved Arrow - Hidden on mobile */}
                             <img
                                 src="/images/tools/curved-up-arrow.svg"
                                 alt=""
-                                className="absolute -left-20 top-1/2 w-24 h-24 z-10"
+                                className="hidden lg:block absolute -left-20 top-1/2 w-24 h-24 z-10"
                             />
 
-                            {/* Keyboard - Lower z-index */}
+                            {/* Keyboard */}
                             <img
                                 src="/images/tools/keyboard.png"
                                 alt="Keyboard"
-                                className="w-[400px] ml-10 -mt-3 relative z-0"
+                                className="w-full max-w-[300px] h-auto lg:ml-10 lg:-mt-3 relative z-0"
                             />
 
                             {/* Bottom Logo Badge */}
@@ -72,7 +72,7 @@ const ToolsSection = () => {
                                 <img
                                     src="/images/tools/bottom-logo.png"
                                     alt="Blockgram"
-                                    className="w-32 h-32"
+                                    className="lg:w-32 lg:h-32 w-20 h-20"
                                 />
                             </div>
                         </div>

@@ -45,5 +45,10 @@ export const featureCards = [
         title: "Auto-Summarization",
         description: "Condense long chats into highlights, and get instant contexts.",
         asset: "/images/features/feature/3.gif"
-    }
+    },
+    {
+        title: "Auto-Summarization",
+        description: "Condense long chats into highlights, and get instant contexts.",
+        asset: "/images/features/feature/3.gif"
+    },
 ];

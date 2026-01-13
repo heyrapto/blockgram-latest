@@ -1,6 +1,6 @@
 const IntroductionSection = () => {
     return (
-        <section className="relative bg-[#0a0e27] overflow-hidden md:h-[600px] h-[1200px]">
+        <section className="relative bg-[#0a0e27] overflow-hidden lg:h-[600px] h-fit lg:pt-0 pt-16">
             {/* Left Content */}
             <div className="max-w-7xl mx-auto px-4 h-full">
                 <div className="flex items-center h-full">
@@ -14,10 +14,12 @@ const IntroductionSection = () => {
                         </p>
                     </div>
                 </div>
+
+                <img src="/images/intro-img.png" alt="Blockgram Coin on Pillar" className="w-full h-full object-contain object-bottom" />
             </div>
 
             {/* Right Image - Positioned absolutely on the section itself */}
-            <div className="absolute bottom-0 right-0 lg:right-[5%] w-[90%] md:w-[50%] lg:w-[45%] h-[50%] md:h-[70%] lg:h-[100%]">
+            <div className="absolute bottom-0 right-0 lg:right-[5%] w-[90%] md:w-[50%] lg:w-[45%] h-[50%] md:h-[70%] lg:h-[100%] lg:flex hidden">
                 <img
                     src="/images/intro-img.png"
                     alt="Blockgram Coin on Pillar"

@@ -66,13 +66,13 @@ const BuiltForSection = () => {
                     <div className="bg-[#FFF]/5 backdrop-blur-sm rounded-3xl border border-[#FFF] overflow-hidden min-w-[800px] lg:min-w-0 lg:h-[800px]">
                         {/* Table Header */}
                         <div className="grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 border-b border-[#FFFFFF05] bg-[#FFFFFF14] h-[82px]">
-                            <div className="text-gray-300 font-semibold text-lg">
+                            <div className="text-gray-300 font-semibold lg:text-lg text-sm">
                                 Feature / Need
                             </div>
-                            <div className="text-white font-semibold text-lg text-center">
+                            <div className="text-white font-semibold lg:text-lg text-sm text-center">
                                 Blockgram
                             </div>
-                            <div className="text-gray-300 font-semibold text-lg text-center">
+                            <div className="text-gray-300 font-semibold lg:text-lg text-sm text-center">
                                 Telegram
                             </div>
                         </div>
@@ -84,10 +84,10 @@ const BuiltForSection = () => {
                             return (
                                 <div
                                     key={index}
-                                    className={`h-[100px] grid grid-cols-[2fr_3fr_3fr] gap-4 p-6 ${isEven ? 'bg-[#FFFFFF05]' : 'bg-transparent'} hover:bg-[#FFFFFF08] transition-colors`}
+                                    className={`lg:h-[100px] h-[60px] grid grid-cols-[2fr_3fr_3fr] gap-4 lg:p-6 p-3 ${isEven ? 'bg-[#FFFFFF05]' : 'bg-transparent'} hover:bg-[#FFFFFF08] transition-colors`}
                                 >
                                     {/* Feature Name */}
-                                    <div className="text-gray-200 font-medium flex items-center">
+                                    <div className="text-gray-200 font-medium lg:text-lg text-sm flex items-center">
                                         {item.feature}
                                     </div>
 
@@ -100,7 +100,7 @@ const BuiltForSection = () => {
                                             height={24}
                                             className="shrink-0"
                                         />
-                                        <span className="text-gray-300">{item.blockgram}</span>
+                                        <span className="text-gray-300 lg:text-lg text-sm">{item.blockgram}</span>
                                     </div>
 
                                     {/* Telegram */}
@@ -112,7 +112,7 @@ const BuiltForSection = () => {
                                             height={24}
                                             className="shrink-0"
                                         />
-                                        <span className="text-gray-400">{item.telegram}</span>
+                                        <span className="text-gray-400 lg:text-lg text-sm">{item.telegram}</span>
                                     </div>
                                 </div>
                             );

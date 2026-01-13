@@ -1,6 +1,6 @@
 const SuggestionsSection = () => {
     return (
-        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden h-[816px]">
+        <section className="relative bg-[#0a0e27] py-20 lg:py-32 overflow-hidden lg:h-[816px] h-fit">
             <div className="absolute inset-0">
                 <img
                     src="/images/tools/bg.png"

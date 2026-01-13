@@ -14,7 +14,7 @@ const StatsSection = () => {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left Content - Large Statistic */}
                     <div className="space-y-8">
-                        <h2 className="text-8xl lg:text-9xl font-medium text-gray-900 leading-none font-fairplay-display">
+                        <h2 className="text-8xl lg:text-[200px] font-medium text-gray-900 leading-none font-fairplay-display">
                             42%
                         </h2>
 

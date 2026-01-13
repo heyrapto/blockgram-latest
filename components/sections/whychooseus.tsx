@@ -38,13 +38,13 @@ const WhyChooseUsSection = () => {
                     {/* Left Content */}
                     <div className="space-y-6 lg:space-y-8 relative z-10">
                         <div>
-                            <h3 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[8.5rem] font-bold text-gray-900 mb-4 lg:mb-6 leading-tight font-fairplay-display">
+                            <h3 className="text-5xl sm:text-5xl lg:text-6xl xl:text-[8.5rem] font-bold text-gray-900 mb-4 lg:mb-6 leading-tight font-fairplay-display">
                                 <div className="flex items-baseline gap-2 lg:gap-3">
                                     <span>Solving</span>
                                     <img
                                         src="/images/why/send-arrow.svg"
                                         alt=""
-                                        className="w-12 h-12 lg:w-16 lg:h-16 translate-y-1"
+                                        className="w-12 h-12 lg:w-16 lg:h-16 translate-y-1 lg:block hidden"
                                     />
                                 </div>
 
@@ -84,7 +84,7 @@ const WhyChooseUsSection = () => {
                     <div className="flex justify-center lg:hidden">
                         <div className="relative">
                             <img
-                                src="/images/why/why-img.png"
+                                src="/images/why/mobile-why.png"
                                 alt="Blockgram Payment Interface"
                                 className="w-full max-w-md object-contain drop-shadow-2xl"
                             />

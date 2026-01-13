@@ -2,7 +2,7 @@ import Button from "@/components/ui/button";
 
 const HeroSection = () => {
     return (
-        <section className="relative lg:h-fit h-screen bg-[#0a0e27] overflow-hidden" id="home">
+        <section className="relative lg:min-h-fit min-h-screen bg-[#0a0e27] overflow-hidden pb-[400px] sm:pb-[350px] lg:pb-0" id="home">
             {/* Background Images */}
             <div className="absolute inset-0">
                 <img
@@ -13,12 +13,12 @@ const HeroSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative max-w-7xl mx-auto px-4 pt-24 sm:pt-28 lg:pt-32 pb-16 lg:pb-20 overflow-visible">
+            <div className="relative max-w-7xl mx-auto px-4 pt-16 sm:pt-28 lg:pt-28 pb-16 lg:pb-20 overflow-visible">
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
 
                     {/* LEFT CONTENT */}
                     <div className="text-white space-y-6 lg:space-y-8 lg:pt-0 pt-30">
-                        <h1 className="text-4xl sm:text-5xl lg:text-7xl leading-tight font-fairplay-display">
+                        <h1 className="text-5xl lg:text-7xl leading-tight font-fairplay-display">
                             The{" "}
                             <span className="text-blue-400 relative inline-block">
                                 Telegram
@@ -61,44 +61,49 @@ const HeroSection = () => {
                         </Button>
                     </div>
 
-                    {/* RIGHT CONTENT – MOCKUP */}
-                    <div className="relative mt-10 lg:mt-0">
+                    {/* RIGHT CONTENT – MOCKUP (Desktop) */}
+                    <div className="relative mt-10 lg:mt-0 hidden lg:block">
                         {/* Arrow (desktop only) */}
                         <img
                             src="/images/hero/arrow.svg"
                             alt=""
-                            className="absolute left-28 top-52 w-20 hidden lg:block z-20"
+                            className="absolute left-28 top-52 w-20 z-20"
                         />
 
                         {/* Mockup Wrapper */}
-                        <div className="relative overflow-visible flex justify-center lg:block"><img
-                            src="/images/hero/main.png"
-                            alt="Blockgram Interface"
-                            className="
-        relative z-10
-        w-full
-        max-w-[320px]
-        sm:max-w-[0px]
-        md:max-w-[500px]
-        pt-12
-        translate-y-6
-        sm:translate-y-8
-        md:translate-y-0
-
-        lg:w-[150%]
-        lg:max-w-none
-        lg:translate-x-10
-        lg:translate-y-0
-    "
-                        />
-
+                        <div className="relative overflow-visible flex justify-center lg:block">
+                            <img
+                                src="/images/hero/main.png"
+                                alt="Blockgram Interface"
+                                className="
+                                    relative z-10
+                                    w-full
+                                    max-w-[320px]
+                                    sm:max-w-[0px]
+                                    md:max-w-[500px]
+                                    pt-12
+                                    translate-y-6
+                                    sm:translate-y-8
+                                    md:translate-y-0
+                                    lg:w-[150%]
+                                    lg:max-w-none
+                                    lg:translate-x-10
+                                    lg:translate-y-0
+                                "
+                            />
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Bottom Gradient */}
-            <div className="absolute bottom-0 left-0 right-0 h-24 lg:h-32 bg-linear-to-t from-[#0a0e27] to-transparent" />
+                {/* Mobile Image - Positioned Absolutely at Right */}
+                <div className="lg:hidden absolute right-0 bottom-[-350px]">
+                    <img
+                        src="/images/hero/main.png"
+                        alt="Blockgram Interface"
+                        className="w-[350px] sm:w-[350px] md:w-[380px] object-contain"
+                    />
+                </div>
+            </div>
         </section>
     );
 };
