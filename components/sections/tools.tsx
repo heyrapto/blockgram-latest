@@ -50,7 +50,7 @@ const ToolsSection = () => {
                             <img
                                 src="/images/tools/summary.png"
                                 alt="AI"
-                                className="w-full max-w-[300px] h-auto relative z-50"
+                                className="w-full lg:max-w-[400px] max-w-[300px] h-auto relative z-50"
                             />
 
                             {/* Curved Arrow - Hidden on mobile */}
@@ -64,7 +64,7 @@ const ToolsSection = () => {
                             <img
                                 src="/images/tools/keyboard.png"
                                 alt="Keyboard"
-                                className="w-full max-w-[300px] h-auto lg:ml-10 lg:-mt-3 relative z-0"
+                                className="w-full lg:max-w-[400px] max-w-[300px] h-auto lg:ml-10 lg:-mt-3 relative z-0"
                             />
 
                             {/* Bottom Logo Badge */}
