@@ -178,15 +178,17 @@ const FeaturesSection = () => {
             w-full
             md:overflow-x-auto
             hide-scrollbar
-            px-4
-            lg:px-8
             pb-8
             md:snap-x
             md:snap-mandatory
+            pl-4
+            lg:pl-[calc((100vw-1024px)/2+1rem)]
+            xl:pl-[calc((100vw-1280px)/2+1rem)]
+            2xl:pl-[calc((100vw-1536px)/2+1rem)]
           "
                 >
-                    {/* Content Wrapper - Centers content if it fits, scrolls if it doesn't */}
-                    <div className="flex flex-col md:flex-row gap-6 w-full md:w-max mx-auto md:min-w-full lg:min-w-0 justify-start lg:justify-center">
+                    {/* Content Wrapper */}
+                    <div className="flex flex-col md:flex-row gap-6 w-full md:w-max">
                         {featureCards.map((card, index) => (
                             <div
                                 key={index}
