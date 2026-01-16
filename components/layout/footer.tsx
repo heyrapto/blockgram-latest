@@ -8,10 +8,10 @@ const Footer = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="space-y-8">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 inline-flex items-center gap-4">
+                        <h2 className="text-3xl lg:text-[50px] font-medium text-gray-900 inline-flex items-center gap-4 font-fairplay-display">
                             Let's stay in touch
                             <a
-                                href="https://twitter.com"
+                                href="https://x.com/blockgramapp"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-900 hover:text-[#0278E0] transition-colors"
@@ -43,18 +43,17 @@ const Footer = () => {
                     </div>
 
                     {/* Right Content - Logo */}
-                    <div className="flex justify-center items-center lg:justify-end">
+                    <div className="flex justify-center lg:justify-end">
                         <img
-                            src="/images/logo.svg"
+                            src="/images/main-logo.png"
                             alt="Blockgram"
-                            className="h-16 lg:h-20 object-contain"
+                            className="h-16 lg:h-[200px] object-contain"
                         />
-                        <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 ml-4">Blockgram</h1>
                     </div>
                 </div>
 
                 {/* Copyright */}
-                <div className="mt-20 pt-8 border-t border-gray-200">
+                <div className="mt-20 pt-5">
                     <p className="text-gray-600 text-sm text-center lg:text-right">
                         © 2025 All rights reserved
                     </p>

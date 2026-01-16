@@ -167,83 +167,92 @@ const FeaturesSection = () => {
 
                 </div>
 
-                {/* Part 2: Feature Cards with Horizontal Scroll */}
-                <div className="relative w-full lg:w-screen">
-                    {/* Left Scroll Button */}
+                {/* Part 2: Feature Cards with Horizontal Scroll (Matched to Reference) */}
+                <div className="relative w-full lg:w-screen lg:-ml-[calc((100vw-100%)/2)]">
                     {canScrollLeft && (
                         <button
                             aria-label="Scroll left"
                             onClick={() => scrollByAmount("left")}
-                            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/10 backdrop-blur-sm p-3 hover:bg-white/20 transition-colors lg:block hidden"
+                            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/10 backdrop-blur-sm p-3 hover:bg-white/20 hidden lg:block"
                         >
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M15 18L9 12L15 6"
+                                    stroke="white"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
                             </svg>
                         </button>
                     )}
 
-                    {/* Scrollable Container */}
                     <div
                         ref={scrollRef}
-                        className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap gap-6 lg:gap-8 overflow-x-scroll hide-scrollbar lg:px-20"
-                        style={{
-                            scrollbarWidth: 'none',
-                            msOverflowStyle: 'none',
-                        }}
+                        className="
+      flex
+      flex-col
+      md:flex-row
+      md:flex-wrap
+      lg:flex-nowrap
+      gap-6
+      overflow-x-scroll
+      hide-scrollbar
+      px-4
+      lg:px-20
+    "
                     >
                         {featureCards.map((card, index) => (
                             <div
                                 key={index}
-                                className="group relative overflow-hidden rounded-[30px] bg-[#0B0F29] text-white p-2 border border-white/10 hover:border-white/20 transition-all duration-300 flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[536px]"
+                                className="flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[536px]"
                             >
-                                {/* Card Image area */}
-                                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-gradient-to-b from-transparent to-[#0B0F29]/50">
-                                    <Image
-                                        src={card.asset}
-                                        alt={card.title}
-                                        fill
-                                        className="object-cover"
-                                        unoptimized
-                                    />
-                                </div>
+                                {/* YOUR card layout stays untouched */}
+                                <div className="group relative overflow-hidden rounded-[30px] bg-[#0B0F29] text-white p-2 border border-white/10">
+                                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+                                        <Image
+                                            src={card.asset}
+                                            alt={card.title}
+                                            fill
+                                            className="object-cover"
+                                            unoptimized
+                                        />
+                                    </div>
 
-                                {/* Card Content */}
-                                <div className="px-6 pb-8">
-                                    <h3 className="text-xl md:text-[25px] font-inter font-medium mb-3">
-                                        {card.title}
-                                    </h3>
-                                    <p className="text-gray-400 text-sm md:text-[20px] leading-relaxed font-inter">
-                                        {card.description}
-                                    </p>
+                                    <div className="px-6 pb-8">
+                                        <h3 className="text-xl md:text-[25px] font-inter font-medium mb-3">
+                                            {card.title}
+                                        </h3>
+                                        <p className="text-gray-400 text-sm md:text-[20px] leading-relaxed font-inter">
+                                            {card.description}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* Right Scroll Button */}
                     {canScrollRight && (
                         <button
                             aria-label="Scroll right"
                             onClick={() => scrollByAmount("right")}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/10 backdrop-blur-sm p-3 hover:bg-white/20 transition-colors lg:block hidden"
+                            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/10 backdrop-blur-sm p-3 hover:bg-white/20 hidden lg:block"
                         >
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 18L15 12L9 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M9 18L15 12L9 6"
+                                    stroke="white"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
                             </svg>
                         </button>
                     )}
                 </div>
-            </div>
 
-            <style jsx>{`
-                .hide-scrollbar {
-                    -ms-overflow-style: none;
-                    scrollbar-width: none;
-                }
-                .hide-scrollbar::-webkit-scrollbar {
-                    display: none;
-                }
-            `}</style>
+
+            </div>
         </section>
     );
 };

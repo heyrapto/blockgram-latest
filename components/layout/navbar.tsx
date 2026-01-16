@@ -1,14 +1,48 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['home', 'about', 'feature', 'how-it-works', 'footer'];
+            const scrollPosition = window.scrollY + 100; // Offset for navbar height
+
+            for (const section of sections) {
+                const element = document.getElementById(section);
+                if (element) {
+                    const offsetTop = element.offsetTop;
+                    const offsetBottom = offsetTop + element.offsetHeight;
+
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+                        setActiveSection(section);
+                        break;
+                    }
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Call once on mount
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const navLinks = [
+        { href: '#home', label: 'Home', id: 'home' },
+        { href: '#about', label: 'About', id: 'about' },
+        { href: '#feature', label: 'Feature', id: 'feature' },
+        { href: '#how-it-works', label: 'How it Works', id: 'how-it-works' },
+        { href: '#footer', label: 'Contact', id: 'footer' }
+    ];
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
@@ -23,21 +57,18 @@ const Navbar = () => {
 
                         {/* Desktop Navigation Links */}
                         <div className="hidden lg:flex items-center gap-8">
-                            <a href="#home" className="text-blue-400 hover:text-blue-300 transition-colors">
-                                Home
-                            </a>
-                            <a href="#about" className="text-gray-300 hover:text-white transition-colors">
-                                About
-                            </a>
-                            <a href="#feature" className="text-gray-300 hover:text-white transition-colors">
-                                Feature
-                            </a>
-                            <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors">
-                                How it Works
-                            </a>
-                            <a href="#footer" className="text-gray-300 hover:text-white transition-colors">
-                                Contact
-                            </a>
+                            {navLinks.map((link) => (
+                                <a
+                                    key={link.id}
+                                    href={link.href}
+                                    className={`transition-colors ${activeSection === link.id
+                                            ? 'text-blue-400'
+                                            : 'text-gray-300 hover:text-white'
+                                        }`}
+                                >
+                                    {link.label}
+                                </a>
+                            ))}
                         </div>
 
                         {/* Desktop Right Side Actions */}
@@ -64,41 +95,19 @@ const Navbar = () => {
                     {isMenuOpen && (
                         <div className="md:hidden mt-4 pt-4 border-t border-white/20">
                             <div className="flex flex-col gap-4">
-                                <a
-                                    href="#home"
-                                    className="text-blue-400 hover:text-blue-300 transition-colors py-2"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    Home
-                                </a>
-                                <a
-                                    href="#about"
-                                    className="text-gray-300 hover:text-white transition-colors py-2"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    About
-                                </a>
-                                <a
-                                    href="#feature"
-                                    className="text-gray-300 hover:text-white transition-colors py-2"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    Feature
-                                </a>
-                                <a
-                                    href="#how-it-works"
-                                    className="text-gray-300 hover:text-white transition-colors py-2"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    How it Works
-                                </a>
-                                <a
-                                    href="#footer"
-                                    className="text-gray-300 hover:text-white transition-colors py-2"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    Contact
-                                </a>
+                                {navLinks.map((link) => (
+                                    <a
+                                        key={link.id}
+                                        href={link.href}
+                                        className={`transition-colors py-2 ${activeSection === link.id
+                                                ? 'text-blue-400'
+                                                : 'text-gray-300 hover:text-white'
+                                            }`}
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
                                 <div className="flex flex-col gap-3 pt-2 border-t border-white/20">
                                     <a
                                         className="text-gray-300 hover:text-white transition-colors py-2"
