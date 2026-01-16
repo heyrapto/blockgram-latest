@@ -196,7 +196,7 @@ const FeaturesSection = () => {
                   w-full
                   md:w-[400px]
                   lg:w-[536px]
-                  h-[644px]
+                  lg:h-[644px]
                 "
                             >
                                 <div className="h-full rounded-[30px] bg-[#0B0F29] p-2 border border-white/10 text-white">
