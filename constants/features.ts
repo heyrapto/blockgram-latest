@@ -47,8 +47,8 @@ export const featureCards = [
         asset: "/images/features/feature/3.gif"
     },
     {
-        title: "Auto-Summarization",
-        description: "Condense long chats into highlights, and get instant contexts.",
-        asset: "/images/features/feature/3.gif"
+        title: "Send & receive crypto in chat",
+        description: "Inbuilt crypto wallet for seamless sending and receiving crypto.",
+        asset: "/images/features/feature/1.gif"
     },
 ];

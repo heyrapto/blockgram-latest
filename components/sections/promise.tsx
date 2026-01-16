@@ -17,7 +17,7 @@ const PromiseSection = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-start pt-20 lg:pt-32">
                     {/* Left Content */}
                     <div className="space-y-8 text-white">
-                        <h2 className="text-5xl lg:text-[70px] font-medium leading-tight font-bricolage-grotesque bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
+                        <h2 className="text-5xl lg:text-[50px] font-medium leading-tight font-bricolage-grotesque bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
                             AI In Blockgram:<br />
                             Promise or Pitfall?
                         </h2>

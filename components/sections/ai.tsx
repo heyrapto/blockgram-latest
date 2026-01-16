@@ -17,23 +17,25 @@ const AISection = () => {
 
             {/* Statue Image - Hidden on mobile, visible on large screens - RIGHT */}
             <div className="hidden lg:block absolute right-0 bottom-0 w-[55%] xl:w-[50%] h-full max-w-[800px]">
-                <img
-                    src="/images/ai/man.png"
-                    alt="Thinker Statue"
-                    className="absolute right-0 bottom-0 h-[85%] w-auto object-cover grayscale"
-                />
+                {/* Wrapper becomes the reference for absolute positioning */}
+                <div className="relative h-full w-full">
+                    <img
+                        src="/images/ai/man.png"
+                        alt="Thinker Statue"
+                        className="absolute right-0 bottom-0 h-[85%] w-auto object-cover"
+                    />
 
-                {/* AI Logo positioned over statue */}
-                <div className="absolute top-[45%] left-[15%] xl:left-[15%]">
+                    {/* Highlight positioned relative to the man */}
                     <img
                         src="/images/ai/highlight.svg"
                         alt=""
-                        className="absolute -top-6 -left-6 w-12 h-12 xl:w-16 xl:h-16"
-                    />
-                    <img
-                        src="/images/ai/logo.png"
-                        alt="Blockgram AI"
-                        className="w-32 h-32 xl:w-40 xl:h-40"
+                        className="
+                        absolute
+                        top-[38%]
+                        right-[63%]
+                        w-12 h-12
+                        xl:w-20 xl:h-20
+                    "
                     />
                 </div>
             </div>
@@ -65,7 +67,7 @@ const AISection = () => {
                             <img
                                 src="/images/ai/man-mobile.png"
                                 alt="Thinker Statue"
-                                className="absolute bottom-0 right-0 h-full w-auto object-cover grayscale"
+                                className="absolute bottom-0 right-0 h-full w-auto object-cover"
                             />
 
                             {/* AI Logo positioned over statue */}

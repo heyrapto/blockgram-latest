@@ -15,13 +15,13 @@ const FindingsSection = () => {
         {
             title: "Forgotten Chats",
             description: "Instantly generate replies, recap conversations for other agents, and create new help articles.",
-            image: "/images/findings/3.png",
+            image: "/images/findings/3.gif",
             size: "small"
         },
         {
             title: "Notification Overload",
             description: "Immediately recommend helpful content with machine learning directly in your product.",
-            image: "/images/findings/4.png",
+            image: "/images/findings/4.gif",
             size: "small"
         },
         {
@@ -78,8 +78,9 @@ const FindingsSection = () => {
                     {findings.slice(2, 5).map((finding, index) => (
                         <div
                             key={index + 2}
-                            className="bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between min-h-[380px] hover:transform hover:scale-[1.02] transition-transform duration-300 overflow-hidden"
+                            className="bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between min-h-[500px] hover:transform hover:scale-[1.02] transition-transform duration-300 overflow-hidden relative"
                         >
+
                             <div className="p-8">
                                 <h3 className="text-xl font-bold mb-4">{finding.title}</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
@@ -90,7 +91,7 @@ const FindingsSection = () => {
                                 <img
                                     src={finding.image}
                                     alt={finding.title}
-                                    className="w-[300px] h-[300px] object-cover"
+                                    className="absolute bottom-[-30px] right-[-50px] w-[300px] h-[300px] object-cover"
                                 />
                             </div>
                         </div>
