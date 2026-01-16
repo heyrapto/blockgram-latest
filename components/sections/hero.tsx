@@ -14,10 +14,10 @@ const HeroSection = () => {
 
             {/* Content */}
             <div className="relative max-w-7xl mx-auto px-4 pt-16 sm:pt-28 lg:pt-28 pb-16 lg:pb-20 overflow-visible">
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-12 items-start">
 
                     {/* LEFT CONTENT */}
-                    <div className="text-white space-y-6 lg:space-y-8 lg:pt-0 pt-30">
+                    <div className="text-white space-y-6 lg:space-y-8 lg:pt-0 mt-[100px]">
                         <h1 className="text-5xl lg:text-7xl leading-tight font-fairplay-display">
                             The{" "}
                             <span className="text-blue-400 relative inline-block">
@@ -85,9 +85,9 @@ const HeroSection = () => {
                                     translate-y-6
                                     sm:translate-y-8
                                     md:translate-y-0
-                                    lg:w-[150%]
+                                    lg:w-[180%]
                                     lg:max-w-none
-                                    lg:translate-x-10
+                                    lg:translate-x-[-100px]
                                     lg:translate-y-0
                                 "
                             />
@@ -100,7 +100,7 @@ const HeroSection = () => {
                     <img
                         src="/images/hero/main.png"
                         alt="Blockgram Interface"
-                        className="w-[350px] sm:w-[350px] md:w-[380px] object-contain"
+                        className="w-[450px] sm:w-[400px] md:w-[450px] object-contain"
                     />
                 </div>
             </div>

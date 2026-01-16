@@ -82,15 +82,36 @@ const FeaturesSection = () => {
                     {/* Main Content Area - Image + Cards */}
                     <div className="relative flex flex-col lg:flex-row gap-8 mb-24">
                         {/* Left: Large Phone Image */}
-                        <div className="w-full lg:w-auto lg:flex-shrink-0 relative">
-                            <div className="relative w-full lg:w-[500px] xl:w-[600px]">
-                                <Image
-                                    src="/images/features/main-feature.png"
-                                    alt="Blockgram Interface"
-                                    width={1500}
-                                    height={1500}
-                                    className="w-full h-auto object-contain rounded-2xl md:rounded-[2rem] shadow-2xl"
-                                />
+                        <div className="flex flex-col gap-[150px]">
+                            <div className="w-full lg:w-auto lg:flex-shrink-0 relative">
+                                <div className="relative w-full lg:w-[500px] xl:w-[600px]">
+                                    <Image
+                                        src="/images/features/main-feature.png"
+                                        alt="Blockgram Interface"
+                                        width={1500}
+                                        height={1500}
+                                        className="w-full h-auto object-contain rounded-2xl md:rounded-[2rem] shadow-2xl"
+                                    />
+                                </div>
+                            </div>
+                            {/* Header at Bottom */}
+                            <div className="lg:flex hidden flex-col items-start justify-center gap-4">
+                                <h2 className="text-4xl md:text-6xl lg:text-7xl font-fairplay-display leading-tight text-center">
+                                    {/* First line */}
+                                    <div className="flex items-center gap-4">
+                                        <span>How Blockgram</span>
+                                        <Image
+                                            src="/images/features/envelope.svg"
+                                            alt="Envelope"
+                                            width={64}
+                                            height={64}
+                                            className="inline-block w-12 md:w-16 h-auto"
+                                        />
+                                    </div>
+
+                                    {/* Second line */}
+                                    <div>Redefines Messaging</div>
+                                </h2>
                             </div>
                         </div>
 
@@ -143,25 +164,7 @@ const FeaturesSection = () => {
                         </div>
                     </div>
 
-                    {/* Header at Bottom */}
-                    <div className="lg:flex hidden flex-col items-start justify-center gap-4">
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-fairplay-display leading-tight text-center">
-                            {/* First line */}
-                            <div className="flex items-center gap-4">
-                                <span>How Blockgram</span>
-                                <Image
-                                    src="/images/features/envelope.svg"
-                                    alt="Envelope"
-                                    width={64}
-                                    height={64}
-                                    className="inline-block w-12 md:w-16 h-auto"
-                                />
-                            </div>
 
-                            {/* Second line */}
-                            <div>Redefines Messaging</div>
-                        </h2>
-                    </div>
                 </div>
 
                 {/* Part 2: Feature Cards with Horizontal Scroll */}
@@ -206,10 +209,10 @@ const FeaturesSection = () => {
 
                                 {/* Card Content */}
                                 <div className="px-6 pb-8">
-                                    <h3 className="text-xl md:text-xl font-inter font-medium mb-3">
+                                    <h3 className="text-xl md:text-[25px] font-inter font-medium mb-3">
                                         {card.title}
                                     </h3>
-                                    <p className="text-gray-400 text-sm md:text-base leading-relaxed font-inter">
+                                    <p className="text-gray-400 text-sm md:text-[20px] leading-relaxed font-inter">
                                         {card.description}
                                     </p>
                                 </div>

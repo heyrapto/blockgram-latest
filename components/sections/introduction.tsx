@@ -19,7 +19,7 @@ const IntroductionSection = () => {
             </div>
 
             {/* Right Image - Positioned absolutely on the section itself */}
-            <div className="absolute bottom-0 right-0 lg:right-[5%] w-[90%] md:w-[50%] lg:w-[45%] h-[50%] md:h-[70%] lg:h-[100%] lg:flex hidden">
+            <div className="absolute bottom-[-100px] right-0 lg:right-[5%] w-[90%] md:w-[50%] lg:w-[45%] h-[50%] md:h-[70%] lg:h-[100%] lg:flex hidden">
                 <img
                     src="/images/intro-img.png"
                     alt="Blockgram Coin on Pillar"
