@@ -3,32 +3,37 @@ const FindingsSection = () => {
         {
             title: "Scam Bots and Fake Accounts",
             description: "Scams are the number one frustration. Fake airdrops, phishing links, and impersonators target users daily. Over 60% of people say they face scam attempts every month.",
-            image: "/images/findings/2.gif",
-            size: "large"
+            image: "/images/findings/1.mp4",
+            size: "large",
+            isVideo: true
         },
         {
             title: "Risky Payments",
             description: "Easily build powerful no-code automations with bots, triggers, conditions, and rules all in one place.",
-            image: "/images/findings/1.gif",
-            size: "large"
+            image: "/images/findings/2.mp4",
+            size: "large",
+            isVideo: true
         },
         {
             title: "Forgotten Chats",
             description: "Instantly generate replies, recap conversations for other agents, and create new help articles.",
-            image: "/images/findings/3.gif",
-            size: "small"
+            image: "/images/findings/3.mp4",
+            size: "small",
+            isVideo: true
         },
         {
             title: "Notification Overload",
             description: "Immediately recommend helpful content with machine learning directly in your product.",
-            image: "/images/findings/4.gif",
-            size: "small"
+            image: "/images/findings/4.mp4",
+            size: "small",
+            isVideo: true
         },
         {
             title: "Too Many Accounts",
             description: "Better understand your customers with AI-powered analysis of support conversations.",
-            image: "/images/findings/5.png",
-            size: "small"
+            image: "/images/findings/5.mp4",
+            size: "small",
+            isVideo: true
         }
     ];
 
@@ -56,7 +61,7 @@ const FindingsSection = () => {
                         {findings.slice(0, 2).map((finding, index) => (
                             <div
                                 key={index}
-                                className="relative bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between md:min-h-[400px] min-h-[500px] hover:scale-[1.02] transition-transform duration-300 overflow-hidden"
+                                className="relative bg-[#122264] rounded-3xl text-white flex flex-col justify-between md:min-h-[400px] min-h-[500px] hover:scale-[1.02] transition-transform duration-300 overflow-hidden"
                             >
                                 <div className="p-8">
                                     <h3 className="text-2xl font-bold mb-4">{finding.title}</h3>
@@ -65,11 +70,22 @@ const FindingsSection = () => {
                                     </p>
                                 </div>
 
-                                <img
-                                    src={finding.image}
-                                    alt={finding.title}
-                                    className="absolute bottom-0 right-0 w-[250px] h-[250px] object-cover overflow-hidden"
-                                />
+                                {finding.isVideo ? (
+                                    <video
+                                        src={finding.image}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        className="absolute bottom-[-50px] right-[-40px] w-[300px] h-[300px] object-cover overflow-hidden"
+                                    />
+                                ) : (
+                                    <img
+                                        src={finding.image}
+                                        alt={finding.title}
+                                        className="absolute bottom-0 right-0 w-[250px] h-[250px] object-cover overflow-hidden"
+                                    />
+                                )}
                             </div>
                         ))}
                     </div>
@@ -78,7 +94,7 @@ const FindingsSection = () => {
                     {findings.slice(2, 5).map((finding, index) => (
                         <div
                             key={index + 2}
-                            className="bg-[#0f1941] rounded-3xl text-white flex flex-col justify-between min-h-[500px] hover:transform hover:scale-[1.02] transition-transform duration-300 overflow-hidden relative"
+                            className="bg-[#122264] rounded-3xl text-white flex flex-col justify-between min-h-[500px] hover:transform hover:scale-[1.02] transition-transform duration-300 overflow-hidden relative"
                         >
 
                             <div className="p-8">
@@ -87,12 +103,24 @@ const FindingsSection = () => {
                                     {finding.description}
                                 </p>
                             </div>
+
                             <div className="mt-8 flex justify-end">
-                                <img
-                                    src={finding.image}
-                                    alt={finding.title}
-                                    className="absolute bottom-[-30px] right-[-50px] w-[300px] h-[300px] object-cover"
-                                />
+                                {finding.isVideo ? (
+                                    <video
+                                        src={finding.image}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        className="absolute bottom-[-80px] right-[-50px] w-[350px] h-[350px] object-cover overflow-hidden"
+                                    />
+                                ) : (
+                                    <img
+                                        src={finding.image}
+                                        alt={finding.title}
+                                        className="absolute bottom-[-30px] right-[-50px] w-[300px] h-[300px] object-cover"
+                                    />
+                                )}
                             </div>
                         </div>
                     ))}
