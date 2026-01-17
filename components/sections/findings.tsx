@@ -61,7 +61,7 @@ const FindingsSection = () => {
                         {findings.slice(0, 2).map((finding, index) => (
                             <div
                                 key={index}
-                                className="relative bg-[#102055] rounded-3xl text-white flex flex-col justify-between md:min-h-[400px] min-h-[500px] hover:scale-[1.02] transition-transform duration-300 overflow-hidden"
+                                className="relative bg-[#0e2264] rounded-3xl text-white flex flex-col justify-between md:min-h-[400px] min-h-[500px] hover:scale-[1.02] transition-transform duration-300 overflow-hidden"
                             >
                                 <div className="p-8">
                                     <h3 className="text-2xl font-bold mb-4">{finding.title}</h3>
@@ -94,7 +94,7 @@ const FindingsSection = () => {
                     {findings.slice(2, 5).map((finding, index) => (
                         <div
                             key={index + 2}
-                            className="bg-[#102055] rounded-3xl text-white flex flex-col justify-between min-h-[500px] hover:transform hover:scale-[1.02] transition-transform duration-300 overflow-hidden relative"
+                            className="bg-[#0e2264] rounded-3xl text-white flex flex-col justify-between min-h-[500px] hover:transform hover:scale-[1.02] transition-transform duration-300 overflow-hidden relative"
                         >
 
                             <div className="p-8">
